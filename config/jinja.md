@@ -61,7 +61,7 @@ the following commands to refresh and then list pillar values for each minions:
 
 ``` bash
 salt '*' saltutil.refresh_pillar
-salt '*' piller.items
+salt '*' pillar.items
 ```
 Your minions should list the values set for the `Debian` OS family.
 
@@ -93,7 +93,7 @@ Loops are useful for creating users and folders in states.
 
 {% raw %}
 ``` yaml
-{% for DIR in ['/dir1','/dir2','/dir3']
+{% for DIR in ['/dir1','/dir2','/dir3'] %}
 {{ DIR }}:
   file.directory:
     - user: root
