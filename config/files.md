@@ -48,10 +48,10 @@ and folders to managed systems.
 
 ## salt://
 
-You are familiar with placing state files in the `srv/salt` folder, but what
-you might not know is that any other files and folders you place in this folder
+You are familiar with placing state files in the `srv/salt` directory, but what
+you might not know is that any other files and folders you place in this directory
 are also available to your Salt minions. You can reference these files in states using
-the `salt://` URL followed by the path to the file relative to the `srv/salt` folder.
+the `salt://` URL followed by the path to the file relative to the `srv/salt` directory.
 
 ## File.Managed 
 

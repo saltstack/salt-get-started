@@ -18,8 +18,8 @@ overview:
 #### State Trees {.sidebar}
 
 State files are organized into a directory tree, called the state tree,
-in the `/srv/salt/` folder. Any new states that you create should be
-placed in this folder. To change this location,
+in the `/srv/salt/` directory. Any new states that you create should be
+placed in this directory. To change this location,
 update the file_roots settings in `/etc/salt/master`.
 
 {: end gs-sidebar :}
@@ -43,7 +43,7 @@ Where `sls1` and `sls2` are the names of the SLS files that you want to
 include. Note that you don't need to include the .sls extension. 
 
 If the state file that you want to include is in a subdirectory in your state
-tree, use a dot (**.**) as a folder separator:
+tree, use a dot (**.**) as a directory separator:
 
 ~~~ yaml
 include:

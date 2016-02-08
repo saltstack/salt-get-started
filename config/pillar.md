@@ -45,7 +45,7 @@ Pillar uses a Top file to match pillar data to minions. This Top file is very
 much like the Top file that is used to match states to minions.
 
 Like state functions, pillar is best learned by example. Create the
-`salt-vagrant-demo-master/saltstack/pillar` folder, and then create a new file
+`salt-vagrant-demo-master/saltstack/pillar` directory, and then create a new file
 called `top.sls`. Add the following:
 
 ``` yaml
@@ -54,7 +54,7 @@ base:
     - default
 ```
 
-Next, create a file named `default.sls` in the same `pillar` folder and add the
+Next, create a file named `default.sls` in the same `pillar` directory and add the
 following:
 
 ``` yaml

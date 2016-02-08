@@ -55,7 +55,7 @@ don't want to use a management server, you simply don't set one up. You
 can move back and forth between this model and the Agent and Server
 model, or use them both together.
 
-### Server-only
+### Server-only ([Agentless](ssh/))
 
 Salt commands can be executed on remote systems using SSH instead of the
 Salt agent. Configure all of your Web servers using the Salt agent, but

@@ -34,8 +34,8 @@ with `salt.states.*`).
 
 #### Vagrant Shared Folders
 
-To simplify things, our Vagrant file maps the `/srv/salt` folder on your Salt
-Master to the local `salt-vagrant-demo-master/saltstack` folder. This means
+To simplify things, our Vagrant file maps the `/srv/salt` directory on your Salt
+Master to the local `salt-vagrant-demo-master/saltstack` directory. This means
 that you can use a local text editor and save the file to the local file
 system, and Vagrant makes it appear as if it were on the Salt Master.
 
@@ -83,7 +83,7 @@ The best way to learn how to use state functions is by examples.
 To see these examples in action, let's start the vagrant demo
 environment you set up in [SaltStack Fundamentals](../fundamentals/).
 
-Open a terminal to the `salt-vagrant-demo-master` folder and run `vagrant up`.
+Open a terminal to the `salt-vagrant-demo-master` directory and run `vagrant up`.
 Refer back to [Demo
 Environment](../fundamentals/)
 section of SaltStack Fundamentals if you need a refresher or if you no longer
@@ -310,8 +310,8 @@ sudo salt 'minion1' state.apply examples test=True
 
 ## init.sls {.notransform}
 
-If you target a folder during a `state.apply` or in the state Top file, salt
-looks for an `init.sls` file in that folder and applies it.
+If you target a directory during a `state.apply` or in the state Top file, salt
+looks for an `init.sls` file in that directory and applies it.
 
 ## That is (sort of) all there is to it
 
