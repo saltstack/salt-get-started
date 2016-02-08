@@ -61,7 +61,7 @@ Complete these instructions to set up a simple SaltStack environment.
 
     <img height="186px" width="176px" src="../images/github-download.png">
 
-4.  Extract the zip file you downloaded, and then open a command prompt to the extracted folder:
+4.  Extract the zip file you downloaded, and then open a command prompt to the extracted directory:
 
     <img class="nolightbox" height="36px" width="36px" src="../images/windows.png" style="float:left;margin-top: 6px">
 

@@ -95,7 +95,7 @@ and django states.
 
 Now that we understand the purpose of the Top file, lets go ahead and create
 one. If you are using the Vagrant demo files you'll notice that there is
-already a top.sls file in the saltstack/salt folder, so we'll just update that
+already a top.sls file in the saltstack/salt directory, so we'll just update that
 one. Otherwise you can create a new file. Add the following to your top.sls
 file:
 

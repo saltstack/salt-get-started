@@ -98,7 +98,7 @@ using cryptographic keys. After installation, each Salt minion sends its public
 key to the Salt master, where it eagerly waits to be accepted. Salt minion keys
 must be accepted before systems can receive commands from the Salt master.
 
-At the command prompt, `cd` into the `vagrant-demo-master` folder and run the
+At the command prompt, `cd` into the `vagrant-demo-master` directory and run the
 following command to log in to your Salt master:
 
 ``` bash

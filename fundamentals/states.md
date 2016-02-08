@@ -57,8 +57,8 @@ put a system component or application into a known configuration.
 States are much easier to understand when you see them in action, so let's make
 one. States are described using YAML, and are simple to create and read.
 
-To simplify things, our Vagrant file maps the `/srv/salt` folder on your Salt
-master to the local `salt-vagrant-demo-master/saltstack/salt` folder. This
+To simplify things, our Vagrant file maps the `/srv/salt` directory on your Salt
+master to the local `salt-vagrant-demo-master/saltstack/salt` directory. This
 means that you can use a local text editor and save the file to the local file
 system, and Vagrant makes it appear as if it were on the Salt master.
 
