@@ -107,7 +107,7 @@ managed:
 
 ## Tutorial - Create a Roster File and Connect
 
-Let's add a roster file and then run a test command. Make sure you are in the Salt SSH directory you created previously
+Let's add a roster file and then run a test command. Make sure you are in the Salt SSH directory that you created previously
 (`~/salt-ssh`) and you have activated the virtual environment (`source venv/bin/activate`).
 
 #. Create a `salt-ssh/roster` text file and save connection details for each agentless system:
@@ -120,9 +120,18 @@ You can add as many systems as you like to this file using this format. The
 example above is based on the vagrant demo systems from the previous
 section, but you can easily substitute the values from your own environment.
 
+#. Create a `salt-ssh/Saltfile` text file and add connection options:
+```yaml
+salt-ssh:
+  roster_file: /home/vagrant/salt-ssh/roster # replace 'vagrant' with your username if needed
+  config_dir: /home/vagrant/salt-ssh
+  log_file: /home/vagrant/salt-ssh/log.txt  
+```
+A [Saltfile](https://docs.saltstack.com/en/latest/topics/ssh/#define-cli-options-with-saltfile) lets you specify command line options that you want included each time you run a command. 
+
 #. Test the connection by running the following command:
 ```bash
-salt-ssh -i '*' --roster-file=roster --log-file=log.txt test.ping
+salt-ssh -i '*' test.ping
 ```
 
 If all goes well you'll get a response from each system.
