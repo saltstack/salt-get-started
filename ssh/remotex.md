@@ -78,24 +78,16 @@ These are just a few examples of the many execution functions available.
 
 ## Tutorial - Remote Execution
 
-All of the remote execution commands in this section can be executed in your demo environment. The only difference is that
-you need to include the `--roster-file=roster` and `--log-file=log.txt` arguments since we are not using the default paths.
+All of the remote execution commands in this section can be executed in your demo environment. These examples match all systems in your roster using the `*` glob, but you can substitute this with the ID you assigned in the `roster` file instead:
 
 ```bash
-salt-ssh '*' --roster-file=roster --log-file=log.txt disk.usage
-salt-ssh '*' --roster-file=roster --log-file=log.txt pkg.install cowsay
-```
-
-These examples match all systems in your roster using the `*` glob, but you can substitute this with the ID you assigned in the `roster` file instead:
-
-```bash
-salt-ssh 'managed' --roster-file=roster --log-file=log.txt network.interfaces
+salt-ssh 'managed' network.interfaces
 ```
 
 You can also pass a comma-delimited list of systems:
 
 ```bash
-salt-ssh 'server1,server2,server3' --roster-file=roster --log-file=log.txt network.interfaces
+salt-ssh 'server1,server2,server3' network.interfaces
 ```
 
 {: end tutorial :}

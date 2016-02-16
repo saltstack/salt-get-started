@@ -64,8 +64,9 @@ managed:
 
 #. Apply the state using the following command:
 ```bash
-salt-ssh '*' --roster-file=roster --log-file=log.txt --config-dir=. state.apply network
+salt-ssh '*' state.apply network
 ```
+(Note that we previously added the `config_dir` path to our `Saltfile`, that is why `salt-ssh` finds  `salt-ssh/master` file.)
 
 ### Manage Files
 
@@ -90,7 +91,7 @@ setting2=value2
 
 #. Apply the state using the following command:
 ```bash
-salt-ssh '*' --roster-file=roster --log-file=log.txt --config-dir=. state.apply config
+salt-ssh '*' state.apply config
 ```
 
 Each time you apply this state, the config file on the agentless system will
@@ -99,7 +100,7 @@ be updated to match the version in `salt-ssh/states/files`.
 For some added fun, you can list the contents of the config file using remote execution:
 
 ```bash
-salt-ssh '*' --roster-file=roster --log-file=log.txt --config-dir=. cmd.run 'cat /tmp/sample.conf'
+salt-ssh '*' cmd.run 'cat /tmp/sample.conf'
 ```
 
 ### Source Control
