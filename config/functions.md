@@ -178,7 +178,7 @@ You can add multiple state function calls under a single State ID:
 ``` yaml
 Install mysql and make sure the mysql service is running:
   pkg.installed:
-    - name: mysql
+    - name: mysql-server
   service.running:
     - name: mysql
 ```
