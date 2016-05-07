@@ -27,7 +27,7 @@ Salt includes the Jinja2 templating engine which can be used in state files,
 pillar files, and other files managed by Salt.
 
 Salt lets you use Jinja to access minion configuration values, grains and
-pillar data, and call Salt execution modules. This is in additional to the
+pillar data, and call Salt execution modules. This is in addition to the
 standard control structures and Python data types that are already available in
 Jinja.
 
