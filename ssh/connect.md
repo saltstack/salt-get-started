@@ -1,6 +1,6 @@
 ---
 title: Connect
-permalink: /ssh/connect.html
+permalink: getstarted/ssh/connect.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt
@@ -17,9 +17,9 @@ Let's learn how Salt SSH stores connection details and connects to agentless sys
 
 ## Roster File
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Extending the Roster {.sidebar}
+#### Extending the Roster
 
 As is common in Salt, the roster system can be extended. You can currently use any of the following data sources to populate the Salt roster:
 
@@ -33,7 +33,7 @@ As is common in Salt, the roster system can be extended. You can currently use a
 
 This guide uses the flat file roster.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 By default, Salt uses a YAML file to store connection details for agentless systems, called the roster. A basic roster file contains an ID, a host, and a user:
 

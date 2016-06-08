@@ -1,24 +1,24 @@
 ---
 title: Functions 
-permalink: /config/functions.html
+permalink: getstarted/config/functions.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
 step: 2
 overview:
   goals:
-    - Call state functions
-    - Understand the difference between state and execution functions
+    - Call Salt state functions
+    - Understand the difference between Salt state and Salt execution functions
   time: 15
   difficulty: 1
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Terminology  { .sidebar } 
+#### Terminology  
 
 -|-
-| Formula | A collection of state and pillar files that configure an application or system component. Most Formulas are made up of several states spread across multiple state files.|
+| Formula | A collection of Salt state and Salt pillar files that configure an application or system component. Most formulas are made up of several states spread across multiple state files.|
 | State | A reusable declaration that configures a specific part of a system. Each state is defined using a state declaration.|
 | State Declaration | A top level section of a state file that lists the state function calls and arguments that make up a state. Each state declaration starts with a unique ID.|
 | State Functions | Commands that you call to perform a configuration task on a system.|
@@ -27,47 +27,47 @@ overview:
 
 #### Function Docs
 
-The [state function
+The [Salt state function
 docs](http://docs.saltstack.com/en/latest/salt-modindex.html#cap-s) are your
-best resource to find available functions and arguments (state functions start
+best resource to find available functions and arguments (Salt state functions start
 with `salt.states.*`).
 
 #### Vagrant Shared Folders
 
 To simplify things, our Vagrant file maps the `/srv/salt` directory on your Salt
-Master to the local `salt-vagrant-demo-master/saltstack` directory. This means
+master to the local `salt-vagrant-demo-master/saltstack` directory. This means
 that you can use a local text editor and save the file to the local file
-system, and Vagrant makes it appear as if it were on the Salt Master.
+system, and Vagrant makes it appear as if it were on the Salt master.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 You learned the basics of the configuration management system in [SaltStack
 Fundamentals](../fundamentals/), so let's take a deep-dive and
-learn more about **state functions**.
+learn more about **Salt state functions**.
 
-## State Functions
+## Salt State Functions
 
-State functions are what do the work in your states, and are the most important
+Salt State functions are what do the work in your Salt states, and are the most important
 thing to master when using SaltStack's configuration management system. 
 
 Functions are available to install and configure applications, create users,
 distribute files, and about anything else you might need to do when setting up
 your systems.
 
-Before we call any functions, let's go over how states are represented in Salt
+Before we call any functions, let's go over how Salt states are represented 
 and the syntax for Salt state function calls. 
 
 ## Syntax
 
-States are described using YAML, which is a simple language for describing
+Salt states are described using YAML, which is a simple language for describing
 structured data (similar to JSON, but more human friendly).
 
-The following diagram shows the format of a state declaration:
+The following diagram shows the format of a Salt state declaration:
 
-![](../images/state-file-described.png)
+![]({{ conf.www_root }}/images/state-file-described.png)
 
-The first line in a state declaration is the ID. Underneath the ID is where you call
-one or more state functions. 
+The first line in a Salt state declaration is the ID. Underneath the ID is where you call
+one or more Salt state functions. 
 
 -   The line with the ID and the line with each function call end with a colon
     (:). - Each function call is indented two spaces below the ID. - Parameters are
@@ -79,7 +79,7 @@ one or more state functions.
 
 ## Function Examples
 
-The best way to learn how to use state functions is by examples. 
+The best way to learn how to use Salt state functions is by examples. 
 To see these examples in action, let's start the vagrant demo
 environment you set up in [SaltStack Fundamentals](../fundamentals/).
 
@@ -116,7 +116,7 @@ Apply `examples.sls` by running the following command:
 sudo salt 'minion1' state.apply examples
 ```
 
-![](../images/functions-1.png)
+![]({{ conf.www_root }}/images/functions-1.png)
 
 
 For extra credit, take a look at the [state.pkg
@@ -161,7 +161,7 @@ and try adding a few more.
 
 ## Service Running
 
-This state ensures that a service is running on the minion:
+This state ensures that a service is running on the Salt minion:
 
 ``` yaml
 Make sure the mysql service is running:
@@ -169,11 +169,11 @@ Make sure the mysql service is running:
     - name: mysql
 ```
 
-Each state declaration is identified by a State ID. State IDs must be unique,
+Each state declaration is identified by a state ID. state IDs must be unique,
 and they can contain spaces and numbers. In the previous example, `Make sure
 the mysql service is running` is a valid ID.
 
-You can add multiple state function calls under a single State ID:
+You can add multiple Salt state function calls under a single state ID:
 
 ``` yaml
 Install mysql and make sure the mysql service is running:
@@ -259,7 +259,7 @@ the details so you don't have to worry about it).
 ## Call an Execution Function
 
 The [service.restart](http://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.service.html#salt.modules.service.restart)
-and other execution functions can be called in states.
+and other execution functions can be called in Salt states.
 
 ``` yaml
 restart vsftpd:
@@ -275,17 +275,17 @@ that you call from the `salt` command line, and they start with `salt.module.*`.
 first and only modules available in the initial versions of Salt. If Salt is
 ever rewritten we should probably start these with `execution.*` instead.)
 
-#### A Bit More About Execution and State Functions
+#### A Bit More About Salt Execution and Salt State Functions
 
 You might be wondering why you would use the service *execution* functions instead
 of the service *state* functions, and why there seems to be so much overlap
-between state and execution functions. 
+between Salt state and Salt execution functions. 
 
 If you compare the names of the salt *execution* functions, such as
 `service.restart`, to similar salt *state* functions, such as
-`service.running`, you might notice a small but important difference. State
+`service.running`, you might notice a small but important difference. Salt state
 functions are designed to make only the changes necessary to apply
-a configuration, and to not make changes otherwise. Execution functions run each
+a configuration, and to not make changes otherwise. Salt execution functions run each
 time they are called, which may or may not result in system changes.
 
 When you call the
@@ -299,7 +299,7 @@ adds additional code to determine if the execution function needs to be called.
 
 ## test=True {.notransform}
 
-Applying a state can result in many changes on the target system. Salt state
+Applying a Salt state can result in many changes on the target system. Salt state
 functions provide a mechanism to display the changes that will be made during
 a live run. The return information will show states that will be applied in
 yellow and the result is reported as `None`.
@@ -316,11 +316,11 @@ looks for an `init.sls` file in that directory and applies it.
 ## That is (sort of) all there is to it
 
 You could go forward from this point and create a wide variety of very useful
-states with only state function calls. Salt ships with hundreds and hundreds of
+Salt states with only Salt state function calls. Salt ships with hundreds of
 functions that can manage all sorts of applications and services. 
 
 The rest of the features in SaltStack's configuration management system let you
-make your states more re-usable with variables and loops, and make your
+make your states more re-usable with variables and loops, branch on failure, and make your
 states declarative using statements such as 'include' and 'require'.
 Mastering these advanced concepts will help you get the most value out of
 SaltStack's configuration management system.
