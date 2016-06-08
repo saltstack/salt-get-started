@@ -1,6 +1,6 @@
 ---
 title: Event Reactor
-permalink: /event/reactor.html
+permalink: getstarted/event/reactor.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
@@ -33,7 +33,7 @@ The following is an example of a reactor configuration that matches minion start
 cloud resource destroyed events, and a custom event string:
 
 ``` yaml
-reactor:                            # Master config section "reactor"
+reactor:                            # Salt master config section "reactor"
 
   - 'salt/minion/*/start':          # Match tag "salt/minion/*/start"
     - /srv/reactor/start.sls        # Things to do when a minion starts
@@ -75,28 +75,28 @@ pick up the change, and then continue.
 
 ## Reactor SLS Files
 
-You are already familiar with state SLS files, and reactor SLS files have many
-similarities. Both state and reactor SLS files are written using YAML and
+You are already familiar with Salt state SLS files, and Salt reactor SLS files have many
+similarities. Both Salt state and Salt reactor SLS files are written using YAML and
 Jinja, but since they have some syntax differences and are used for different
 purposes, they should be kept in separate locations in your Salt fileserver
 (for example, reactors can go in a `/srv/salt/reactors` directory).
 
-Since reactor SLS files execute on the Salt master, it is useful to think of
+Since Salt reactor SLS files execute on the Salt master, it is useful to think of
 them more as entry points into the `salt` and `salt-run` commands rather than
-as entry points into the state system.
+as entry points into the Salt state system that executes on the Salt minion.
 
 So what exactly can you do with Salt reactors? Let's go on to the next section
 to find out.
 
 ## Types of Reactions
 
-Reactors trigger one of the following systems:
+Salt reactors trigger one of the following systems:
 
 * **Remote execution**: run an execution module on the targeted minions. This
 is anything you would do by calling the `salt` command (including applying
 a state or highstate).
 
-* **Runners**: These are tasks you would start using `salt-run`. For example,
+* **Salt Runners**: These are tasks you would start using `salt-run`. For example,
 the
 [HTTP](https://docs.saltstack.com/en/latest/ref/runners/all/salt.runners.http.html)
 runner can trigger a webhook. 
@@ -107,7 +107,7 @@ exposed by the `salt-key` utility.
 
 ### Remote Execution
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
 #### Other target types
 
@@ -122,7 +122,7 @@ clean_tmp:
     - arg:
       - rm -rf /tmp/*
 ```
-{: end gs-sidebar :}
+{: end sidebar :}
 
 This interface is a direct connection to the Salt execution modules. If you
 think about this in terms of how remote execution is triggered from the command
@@ -244,10 +244,10 @@ spam slack:
 
 The `build_id` and `status` would be custom data that you insert when you trigger the event.
 
-### States
+### Salt States
 
 The `state` execution module can be used within a reactor SLS file to apply
-a state or to trigger a highstate. You can also use Jinja to substitute values
+a Salt state or to trigger a highstate. You can also use Jinja to substitute values
 and perform testing and filtering:
 
 {% raw %}
@@ -262,7 +262,7 @@ highstate_run:
 
 ## Let's try it out
 
-Now that you understand reactor SLS files, create the
+Now that you understand Salt reactor SLS files, create the
 `salt-vagrant-demo/saltstack/salt/reactor` directory, and then create a file
 called `customevent.sls` in that directory. Next, add one of the reactor SLS
 examples from this section, or create your own. Make sure you update the target
@@ -274,9 +274,8 @@ From the command-line on your Salt master, trigger the following custom event:
 sudo salt-call event.send 'my/custom/event/tag' 
 ```
 
-This event will be picked up by the reactor and will trigger the
+This event is picked up by the Salt reactor and triggers the
 `customevent.sls` file you created.
 
 This guide has shown you some of the many ways you can use the Salt
 reactor to automate your infrastructure, the sky is the limit!
-
