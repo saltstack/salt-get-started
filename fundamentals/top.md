@@ -70,7 +70,7 @@ file.
 ## Create your own Top file
 
 Before we create a Top file, it might be useful to take a moment to think about
-what what *your* system configurations look like. Consider the different types
+what *your* system configurations look like. Consider the different types
 of systems you set up, and what is common and unique about each. Each system
 can receive multiple configurations, so start with the most general
 configurations and work your way down to the specifics.
