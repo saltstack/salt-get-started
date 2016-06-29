@@ -61,8 +61,8 @@ section:
 
 ``` yaml
 reactor:
-    - 'my/custom/event/tag':
-    - salt://reactor/customevent.sls
+  - 'my/custom/event/tag':
+  - salt://reactor/customevent.sls
 ```
 This tells the Salt master that anytime it sees an event that contains
 `my/custom/event/tag`, call the `customevent.sls` file.
@@ -185,11 +185,11 @@ clear_the_grains_cache_for_all_minions:
 
 ``` yaml
 spin_up_more_web_machines:
-runner.cloud.profile:
-- prof: centos_6
-- instances:
-  - web11       # These VM names would be generated via Jinja in a
-  - web12       # real-world example.
+  runner.cloud.profile:
+    - prof: centos_6
+    - instances:
+      - web11       # These VM names would be generated via Jinja in a
+      - web12       # real-world example.
 ```
 
 Here is a wheel example that accepts a minion key automatically (in production you'll
