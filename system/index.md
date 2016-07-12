@@ -13,9 +13,9 @@ Before we get into the specifics of the Salt components, it is helpful to unders
 
 ## Real-time communication
 
-All Salt minions receive commands simultaneously. This means that the time it takes to update 10 or 10,000 systems is quite similar, and queries to thousands of systems can be done in seconds. The Salt way to get information about your infrastructure is to query it in real time rather than rely on an (often outdated) database. 
+All Salt minions receive commands simultaneously. This means that the time it takes to update 10 or 10,000 systems is quite similar, and queries to thousands of systems can be done in seconds. The Salt way to get information about your infrastructure is to query it in real time rather than rely on an (often outdated) database.
 
-(Note: Databases are great for storing job results, and Salt supports over 30 job results plug-ins including mysql, elasticsearch, syslog, carbon, and reddis. Salt also supports interfacing with many data stores to provide secure configuration data. When it comes to decisions that depend on the current system configuration though, Salt views a static database a bit like asking each person in the room a question by sending a separate text message and then writing the answer in a notebook.)
+(Note: Databases are great for storing job results, and Salt supports over 30 job results plug-ins including mysql, elasticsearch, syslog, carbon, and redis. Salt also supports interfacing with many data stores to provide secure configuration data. When it comes to decisions that depend on the current system configuration though, Salt views a static database a bit like asking each person in the room a question by sending a separate text message and then writing the answer in a notebook.)
 
 ## No freeloaders!
 
@@ -24,7 +24,7 @@ Salt minions do their own work. Communication from the Salt master is a lightwei
 ## Salt loves to scale
 
 Salt is designed for high-performance and scalability. Salt's communication system establishes a persistent data pipe between the Salt master and minions using ZeroMQ or raw TCP, giving Salt considerable performance advantages over competing solutions. Messages are efficiently serialized on the wire using MessagePack. Internally, Salt uses Python Tornado (implemented by some really smart developers) as an asynchronous networking library, and Salt is tuned using leading-edge approaches to multi-threading and concurrency.
- 
+
 It is not uncommon to meet users with over 10,000 minions on a single master in production, and there are known deployments with over 35,000 minions on a single Salt master! Salt has proven real-world speed and scalability.
 
 ## Normalize everything
@@ -43,7 +43,7 @@ Salt's event-driven infrastructure not only lets you automate initial system con
 
 ## Programming Optional
 
-You can use all of the salt capabilities without learning a programming language. Salt's remote execution capabilities are CLI commands, and the State system uses YAML to describe the desired configuration of a system. 
+You can use all of the salt capabilities without learning a programming language. Salt's remote execution capabilities are CLI commands, and the State system uses YAML to describe the desired configuration of a system.
 
 You can still take the "infrastructure as code" approach---Salt has many tools to support this including a powerful requisite system with imperative and declarative execution. Salt just saves you from needing to write Python or Ruby code to describe your infrastructure.
 
@@ -55,4 +55,4 @@ Salt can quickly adopt new technologies and manage new applications as they are 
 
 ## Plug-ins
 
-In the next section, we'll learn about Salt plug-ins and why they are so critical to the Salt approach. 
+In the next section, we'll learn about Salt plug-ins and why they are so critical to the Salt approach.
