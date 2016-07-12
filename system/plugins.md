@@ -1,5 +1,5 @@
 ---
-title: Plug-ins 
+title: Plug-ins
 permalink: getstarted/system/plugins.html
 type: page
 layout: getstarted.tmpl
@@ -22,7 +22,7 @@ On top of this core framework, the remaining features of Salt are exposed as a s
 Salt contains over 20 pluggable subsystems, but most users are interested in only the handful that are used to directly manage systems. The following table
 contains a list of some of the more common subsystems in Salt:
 
-Subsystem | | 
+Subsystem | |
 --|--
 Authentication | Authorizes a user before running a job.
 File server | Distributes files.
@@ -38,7 +38,7 @@ Configuration | Configures targeted systems to match a desired state.
 
 #### What does it mean to be "pluggable"?
 
-Salt doesn't define a built-in way to perform the task for any subsystem, each subsystem simply delegates its work to a plug-in. Salt provides a default plug-in for each system, but changing the plug-in in most cases is as simple as updating a configuration file. This pluggability is what makes Salt so flexibile. 
+Salt doesn't define a built-in way to perform the task for any subsystem, each subsystem simply delegates its work to a plug-in. Salt provides a default plug-in for each system, but changing the plug-in in most cases is as simple as updating a configuration file. This pluggability is what makes Salt so flexibile.
 
 {: end sidebar :}
 
@@ -59,18 +59,18 @@ state run or remote execution job:
 
 {: section sidebar :}
 
-#### Plug-ins? It sounds like you are talking about Salt Modules! 
+#### Plug-ins? It sounds like you are talking about Salt Modules!
 
 In Salt, plug-ins are known by their Python name, *module*. Since each plug-in is a Python module,
-most of the time they are simply called modules, or more accurately, Salt *subsystem* modules (Salt auth modules, Salt fileserver modules, and so on). 
+most of the time they are simply called modules, or more accurately, Salt *subsystem* modules (Salt auth modules, Salt fileserver modules, and so on).
 
 As long as you understand that each Salt module
-is a plug-in that extends one of the many subsystems in Salt, you'll understand this relationship well enough. 
+is a plug-in that extends one of the many subsystems in Salt, you'll understand this relationship well enough.
 
 {: end sidebar :}
 
 At each step, the subsystem delegates its work to the
- configured plug-in. For example, the job returner plug-in in step 7 might be one of 30 plug-ins including MySQL, reddis,
+ configured plug-in. For example, the job returner plug-in in step 7 might be one of 30 plug-ins including MySQL, redis,
  or not be configured at all (the job returner plug-in can also run directly on the managed system after step 4).
 
  At each step, there are many plug-ins available to perform a task, resulting in hundreds of possible Salt configurations and workflows.
@@ -87,10 +87,10 @@ For fun, let's take the "technically accurate" approach and answer a few common 
 
 - *How does salt format results?* -  YAML, JSON, plain text, python data
   structure, and several other formats, and you can change the format anytime using a single argument.
-  
+
 - *What format does Salt use for configuration declarations?* - Choose from one of 15 supported formats depending on your use case, and you also have your choice of templating languages. The format is specified on a per file basis, so you can use multiple formats simultaneously.
 
-- *Where are results stored?* Anywhere you want, you have 30 options! 
+- *Where are results stored?* Anywhere you want, you have 30 options!
 
 Aside from making you very annoying in conversation, answering questions this way does say something about the Salt approach to management. You know your infrastructure, and in today's complex environments there isn't a single best way to do anything.
 
@@ -104,12 +104,12 @@ With your new knowledge of the pluggable subsystems in Salt, hopefully you are s
 
 We've covered a lot here, but there is one additional thing we need to tackle regarding modules. Remember earlier when we explained how Salt abstracts the underlying details of the operating system? One way that Salt achieves this abstraction is by using virtual modules.
 
-Some management tasks are performed so differently between operating systems, there is very little code that can be reused between them when writing a plug-in. 
+Some management tasks are performed so differently between operating systems, there is very little code that can be reused between them when writing a plug-in.
 
 For example, package management on Debian systems is done using an execution module called `aptpkg`. On Redhat, it is done using an execution module called `yumpkg` (for reasons that should be apparent). If you've used Salt at all though, you'd know that salt calls the `pkg` remote execution module for package management and it works across all OSs.
 
 To enable this type of abstraction, Salt loads these types of modules using a virtual module name. The `aptpkg` module contains instructions that basically say "If you are a Debian system, load this module as `pkg`. Otherwise, don't load this!" Similar code is present in the `yumpkg` with a check for Redhat or CentOS. This way multiple modules can exist to perform the same task, but only one gets loaded with the virtual name.
 
-Keep this in mind when you are reading module documentation, as you often need to read the documentation for the non-virtual module to understand the behavior. You can search for `__virtualname__` inside a Salt module to find out the name that Salt uses when loading that module. 
+Keep this in mind when you are reading module documentation, as you often need to read the documentation for the non-virtual module to understand the behavior. You can search for `__virtualname__` inside a Salt module to find out the name that Salt uses when loading that module.
 
 Still with me? Good. Let's move on and talk about how Salt communicates on the wire.
