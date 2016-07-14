@@ -1,6 +1,6 @@
 ---
 title: Includes
-permalink: getstarted/config/include.html
+permalink: config/include.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management

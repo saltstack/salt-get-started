@@ -1,6 +1,6 @@
 ---
 title: Beacons
-permalink: getstarted/event/beacons.html
+permalink: event/beacons.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure

@@ -1,6 +1,6 @@
 ---
 title: Introduction
-permalink: getstarted/ssh/index.html
+permalink: ssh/index.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt

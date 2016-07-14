@@ -1,6 +1,6 @@
 ---
 title: Create a Salt State
-permalink: getstarted/fundamentals/states.html
+permalink: fundamentals/states.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -78,7 +78,7 @@ package names for the `pkgs` argument.
 
 Save this example as `salt-vagrant-demo-master/saltstack/salt/nettools.sls`:
 
-![]({{ conf.www_root }}/images/vagrant-nettools.png)
+![]({{ conf.images }}/vagrant-nettools.png)
 
 Lets go ahead and test our state. We'll learn about a more powerful method to
 apply states, called highstate, in the next section, but for now you can use
@@ -96,12 +96,12 @@ state to any set of Salt minions. For now just pick one or all of your Salt
 minions. If everything goes well, you'll get output similar to this (click to
 enlarge):
 
-![]({{ conf.www_root }}/images/vagrant-state-apply.png)
+![]({{ conf.images }}/vagrant-state-apply.png)
 
 If that is not cool enough, apply the state again to the same Salt minion(s),
 and look at the output:
 
-![]({{ conf.www_root }}/images/vagrant-state-apply2.png)
+![]({{ conf.images }}/vagrant-state-apply2.png)
 
 Salt determines that the system is already in the correct state, so nothing is
 changed (this is called idempotent in academic circles). Nice.

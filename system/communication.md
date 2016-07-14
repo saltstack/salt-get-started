@@ -1,6 +1,6 @@
 ---
 title: Communication
-permalink: getstarted/system/communication.html
+permalink: system/communication.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack
@@ -15,7 +15,7 @@ This section describes the Salt communication model along with a basic overview 
 
 Salt uses a server-agent communication model, (though it works well as a standalone single-server management utility, and also provides the ability to run agentless over SSH). The server component is called the Salt master, and the agent is called the Salt minion.
 
-<img width="30%" class="imgcenter" src="{{ conf.www_root }}/images/master-minion.png">
+<img width="30%" class="imgcenter" src="{{ conf.images }}/master-minion.png">
 
 The Salt master is responsible for sending commands to Salt minions, and then aggregating and displaying the results of those commands. A single Salt master can manage thousands of systems.
 
@@ -23,7 +23,7 @@ The Salt master is responsible for sending commands to Salt minions, and then ag
 
 Salt communicates with managed systems using a [publish-subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) pattern. Connections are initiated by the Salt minion, which means that you do not need to open any incoming ports on those systems (thereby reducing the attack vector). The Salt master uses ports 4505 and 4506, which must be opened to accept incoming connections.
 
-<img height="30px" class="imgcenter" src="{{ conf.www_root }}/images/basic-comm.png">
+<img height="30px" class="imgcenter" src="{{ conf.images }}/basic-comm.png">
 
 -|-
 |**Publisher**|(port 4505) All Salt minions establish a persistent connection to the publisher port where they listen for messages. Commands are sent asynchronously to all connections over this port, which enables commands to be executed over large numbers of systems simultaniously.|
@@ -33,7 +33,7 @@ Salt communicates with managed systems using a [publish-subscribe](https://en.wi
 
 When the minion starts for the first time, it searches the network for a system named `salt` (though this can be easily changed to an IP or different hostname). When found, the minion initiates a handshake and then sends its public key to the Salt master.
 
-<img width="30%" class="imgcenter" src="{{ conf.www_root }}/images/public-key.png">
+<img width="30%" class="imgcenter" src="{{ conf.images }}/public-key.png">
 
 After this initial connection, the Salt minion's public key is stored on the server, and it must be accepted on the Salt master using the `salt-key` command (or through some automated mechanism). This can be a source of confusion for new users since Salt won't provide the security key required to decode messages until the Salt minion's public key is accepted (which means that the Salt minion won't run any commands until its key is accepted).
 

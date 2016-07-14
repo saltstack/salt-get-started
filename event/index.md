@@ -1,6 +1,6 @@
 ---
 title: Event-Driven Infrastructure
-permalink: getstarted/event/index.html
+permalink: event/index.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure

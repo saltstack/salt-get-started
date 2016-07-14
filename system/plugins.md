@@ -1,6 +1,6 @@
 ---
 title: Plug-ins 
-permalink: getstarted/system/plugins.html
+permalink: system/plugins.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack
@@ -45,7 +45,7 @@ Salt doesn't define a built-in way to perform the task for any subsystem, each s
 To illustrate, the following diagram shows several of the common
 subsystems along with the most common plug-ins for each subsystem.
 
-<img width="50%" class="imgcenter" src="{{ conf.www_root }}/images/salt-subsystems.png">
+<img width="50%" class="imgcenter" src="{{ conf.images }}/salt-subsystems.png">
 
 This diagram shows only a handful of the available subsystems and plug-ins, but it should give you a sense of the general architecture of Salt.
 
@@ -55,7 +55,7 @@ When a job runs, several Salt subsystems are invoked in order
 to process the job. The following diagram shows the subsystem flow of a typical
 state run or remote execution job:
 
-<img width="80%" class="imgcenter" src="{{ conf.www_root }}/images/salt-subsystems-workflow.png">
+<img width="80%" class="imgcenter" src="{{ conf.images }}/salt-subsystems-workflow.png">
 
 {: section sidebar :}
 

@@ -1,6 +1,6 @@
 ---
 title: Introduction
-permalink: getstarted/config/index.html
+permalink: config/index.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management

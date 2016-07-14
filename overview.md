@@ -2,7 +2,7 @@
 title: SaltStack Components
 type: page
 layout: getstarted-intro.tmpl
-permalink: getstarted/overview.html
+permalink: overview.html
 parent:
   title: Get Started
   url: index.html

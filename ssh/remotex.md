@@ -1,6 +1,6 @@
 ---
 title: Remote Execution
-permalink: getstarted/ssh/remotex.html
+permalink: ssh/remotex.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt

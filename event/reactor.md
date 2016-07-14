@@ -1,6 +1,6 @@
 ---
 title: Event Reactor
-permalink: getstarted/event/reactor.html
+permalink: event/reactor.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
@@ -14,7 +14,7 @@ overview:
   difficulty: 3
 parent:
   title: Get Started
-  url: ../index.html
+  url: index.html
 ---
 
 Salt's Reactor system gives you the ability to trigger actions in response to

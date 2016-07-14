@@ -1,6 +1,6 @@
 ---
 title: Custom Events
-permalink: getstarted/event/custom.html
+permalink: event/custom.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure

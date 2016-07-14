@@ -1,6 +1,6 @@
 ---
 title: Remote Execution
-permalink: getstarted/system/execution.html
+permalink: system/execution.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack
@@ -51,7 +51,7 @@ If you enjoy a code dive (who doesn't!) take a look at the [`rand_sleep`](https:
 
 When the Salt minion receives a command, it simply finds the correct module (in this example, the `test` module), and then calls the corresponding function (`rand_sleep`) providing the supplied arguments (`120`). In this sense, you can think of Salt as a (crazy powerful) abstraction layer to Python functions.
 
-<img width="50%" class="imgcenter" src="{{ conf.www_root }}/images/cmd-syntax2.png">
+<img width="50%" class="imgcenter" src="{{ conf.images }}/cmd-syntax2.png">
 
 When using remote execution, you'll want to bookmark the [complete list of execution modules](https://docs.saltstack.com/en/latest/ref/modules/all/index.html). If you are ever wondering if Salt can manage a Tomcat server, this is your first stop (note: yes, it can). The module docs have many examples, and are simple to call.
 

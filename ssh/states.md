@@ -1,6 +1,6 @@
 ---
 title: Apply States 
-permalink: getstarted/ssh/states.html
+permalink: ssh/states.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt
@@ -12,7 +12,7 @@ overview:
   difficulty: 2
 parent:
   title: Get Started
-  url: ../index.html
+  url: index.html
 ---
 
 Salt states are fully compatible with Salt SSH, and can be used to quickly

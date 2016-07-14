@@ -2,7 +2,7 @@
 title: Introduction
 type: page
 layout: getstarted-intro.tmpl
-permalink: getstarted/index.html
+permalink: index.html
 imgmap: True
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Runners
-permalink: getstarted/system/runners.html
+permalink: system/runners.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack

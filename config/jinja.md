@@ -1,6 +1,6 @@
 ---
 title: Jinja
-permalink: getstarted/config/jinja.html
+permalink: config/jinja.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management

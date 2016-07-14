@@ -1,6 +1,6 @@
 ---
 title: Targeting
-permalink: getstarted/fundamentals/targeting.html
+permalink: fundamentals/targeting.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -60,7 +60,7 @@ called `role` to each Salt minion to describe the function of the system.
 
 You can use the `grains.ls` command to list all of the grains on a Salt minion:
 
-<img class="imgcenter" width="100%" src="{{ conf.www_root }}/images/vagrant-grains.png">
+<img class="imgcenter" width="100%" src="{{ conf.images }}/vagrant-grains.png">
 
 Note that grain names are lowercase.
 

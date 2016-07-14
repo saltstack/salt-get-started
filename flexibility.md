@@ -2,7 +2,7 @@
 title: SaltStack Flexibility
 type: page
 layout: getstarted-intro.tmpl
-permalink: getstarted/flexibility.html
+permalink: flexibility.html
 parent:
   title: Get Started
   url: index.html

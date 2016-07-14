@@ -1,6 +1,6 @@
 ---
 title: Apply and Target States
-permalink: getstarted/fundamentals/top.html
+permalink: fundamentals/top.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -12,7 +12,7 @@ overview:
   difficulty: 2
 next:
   title: Continue to Configuration Management Get Started
-  url: ../config/
+  url: config/
 modals:
   - id: highstate-modal
     title: Highstate?
@@ -77,7 +77,7 @@ configurations and work your way down to the specifics.
 
 For example, you might start with a simple description similar to the following:
 
-<img class="imgcenter" src="{{ conf.www_root }}/images/planning1.png">
+<img class="imgcenter" src="{{ conf.images }}/planning1.png">
 
 In the SaltStack paradigm, the list itself would be the Top file, and each item
 on the list would be a state. Targets are used within the Top file to define
@@ -86,7 +86,7 @@ which states are applied to each Salt minion.
 The following example shows how our configurations might be translated to YAML
 and represented in a Top file:
 
-![]({{ conf.www_root }}/images/planning.png)
+![]({{ conf.images }}/planning.png)
 
 When the Top file is evaluated, Salt minions execute all states that are
 defined for any target that they match. For example, a system with a Salt

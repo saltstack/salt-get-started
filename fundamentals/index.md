@@ -4,7 +4,7 @@ type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals 
 step: 1
-permalink: getstarted/fundamentals/index.html
+permalink: fundamentals/index.html
 ---
 
 {: section sidebar :}
@@ -59,16 +59,16 @@ Complete these instructions to set up a simple SaltStack environment.
 3.  Download <https://github.com/UtahDave/salt-vagrant-demo>. You can use git
     or download a zip of the project directly from GitHub:
 
-    <img height="186px" width="176px" src="{{ conf.www_root }}/images/github-download.png">
+    <img height="186px" width="176px" src="{{ conf.images }}/github-download.png">
 
 4.  Extract the zip file you downloaded, and then open a command prompt to the extracted directory:
 
-    <img class="nolightbox" height="36px" width="36px" src="{{ conf.www_root }}/images/windows.png" style="float:left;margin-top: -6px">
+    <img class="nolightbox" height="36px" width="36px" src="{{ conf.images }}/windows.png" style="float:left;margin-top: -6px">
 
     ```bash
     cd %homepath%\Downloads\salt-vagrant-demo-master
     ```
-    <img class="nolightbox" height="36px" width="36px" src="{{ conf.www_root }}/images/mac.png" style="float:left;margin-top: -6px">
+    <img class="nolightbox" height="36px" width="36px" src="{{ conf.images }}/mac.png" style="float:left;margin-top: -6px">
 
     ```bash
     cd ~\Downloads\salt-vagrant-demo-master

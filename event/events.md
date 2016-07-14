@@ -1,6 +1,6 @@
 ---
 title: Watching Events
-permalink: getstarted/event/events.html
+permalink: event/events.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
