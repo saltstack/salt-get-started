@@ -1,6 +1,6 @@
 ---
 title: Salt Approach
-permalink: getstarted/system/index.html
+permalink: system/index.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack

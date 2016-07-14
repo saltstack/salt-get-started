@@ -1,6 +1,6 @@
 ---
 title: Install SaltStack
-permalink: getstarted/fundamentals/install.html
+permalink: fundamentals/install.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -35,7 +35,7 @@ modals:
       Salt minions attempt to contact the Salt master using the `salt` hostname. If you don\'t have DNS in your environment, or if the Salt master hostname is something other than `salt`, you can add the IP address of your Salt master server to the `/etc/salt/minion` configuration file by changing the `master` setting.
       
       For example, we\'ve set the Salt master setting directly to the IP address we configured for the demo Vagrant files:
-      <img class="imagecenter" src="{{ conf.www_root }}/images/vagrant-master-setting.png">
+      <img class="imagecenter" src="../images/vagrant-master-setting.png">
       
       The bootstrap script supports passing the Salt master IP address directly using the **-A** option.
     button: Got It!
@@ -72,7 +72,7 @@ to install using bootstrap!</a>
 
 {: section sidebar :}
 
-<span id="install-video-modal"><img class="imgcenter nolightbox" width="75%" src="{{ conf.www_root }}/images/install-video.png"></span>
+<span id="install-video-modal"><img class="imgcenter nolightbox" width="75%" src="{{ conf.images }}/install-video.png"></span>
 
 #### Packages
 
@@ -87,7 +87,7 @@ methods are documented at <http://repo.saltstack.com>.
 
 #### Architecture 101
 
-![]({{ conf.www_root }}/images/arch2.png)
+![]({{ conf.images }}/arch2.png)
 
 {: end sidebar :}
 
@@ -111,7 +111,7 @@ After you connect, run the following command to become the root user:
 sudo su
 ```
 
-![]({{ conf.www_root }}/images/vagrant-ssh-master.png)
+![]({{ conf.images }}/vagrant-ssh-master.png)
 
 #### View all keys
 
@@ -136,7 +136,7 @@ salt-key --accept=<key>
 salt-key --accept-all
 ```
 
-![]({{ conf.www_root }}/images/vagrant-keys.png)
+![]({{ conf.images }}/vagrant-keys.png)
 
 ## Send a Command
 
@@ -147,7 +147,7 @@ verify that your Salt minions are listening:
 salt '*' test.ping
 ```
 
-![]({{ conf.www_root }}/images/vagrant-test.png)
+![]({{ conf.images }}/vagrant-test.png)
 
 If you don't see all of your Salt minions respond, well that is what happens
 when you set things up manually. You probably typed something wrong, didn't

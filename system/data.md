@@ -1,6 +1,6 @@
 ---
 title: System Data
-permalink: getstarted/system/data.html
+permalink: system/data.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack

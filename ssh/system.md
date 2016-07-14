@@ -1,6 +1,6 @@
 ---
 title: Install Salt SSH
-permalink: getstarted/ssh/system.html
+permalink: ssh/system.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt

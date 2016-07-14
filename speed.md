@@ -2,7 +2,7 @@
 title: SaltStack Speed
 type: page
 layout: getstarted-intro.tmpl
-permalink: getstarted/speed.html
+permalink: speed.html
 parent:
   title: Get Started
   url: index.html

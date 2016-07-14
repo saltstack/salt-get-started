@@ -1,6 +1,6 @@
 ---
 title: Pillar
-permalink: getstarted/config/pillar.html
+permalink: config/pillar.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management

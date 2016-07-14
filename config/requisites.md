@@ -1,6 +1,6 @@
 ---
 title: Ordering & Requisites
-permalink: getstarted/config/requisites.html
+permalink: config/requisites.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
@@ -36,7 +36,7 @@ in the file. Additionally, in the Top file, each Salt state file is applied in
 the order listed. For example, the state IDs in the following diagram run in
 sequential order as a result of the organization of the Top file and Salt state files:
 
-![]({{ conf.www_root }}/images/imperative.png)
+![]({{ conf.images }}/imperative.png)
 
 By organizing the Salt states that you want applied in this order, you can
 control execution order without explicitly defining dependencies.
@@ -47,7 +47,7 @@ Requisites let you explicitly specify the dependencies for an ID in a
 state. If you add a statement that indicates `id1` requires `id4`, `id4`
 is applied first.
 
-![]({{ conf.www_root }}/images/declarative.png)
+![]({{ conf.images }}/declarative.png)
 
 You can use the `state.show_sls` execution function to view the order in which
 Salt states are applied. For example:

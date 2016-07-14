@@ -1,6 +1,6 @@
 ---
 title: Manage Files
-permalink: getstarted/config/files.html
+permalink: config/files.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
@@ -13,7 +13,7 @@ overview:
   difficulty: 1
 parent:
   title: Get Started
-  url: ../index.html
+  url: index.html
 ---
 
 {: section sidebar :}

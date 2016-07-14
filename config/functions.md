@@ -1,6 +1,6 @@
 ---
 title: Functions 
-permalink: getstarted/config/functions.html
+permalink: config/functions.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
@@ -64,7 +64,7 @@ structured data (similar to JSON, but more human friendly).
 
 The following diagram shows the format of a Salt state declaration:
 
-![]({{ conf.www_root }}/images/state-file-described.png)
+![]({{ conf.images }}/state-file-described.png)
 
 The first line in a Salt state declaration is the ID. Underneath the ID is where you call
 one or more Salt state functions. 
@@ -116,7 +116,7 @@ Apply `examples.sls` by running the following command:
 sudo salt 'minion1' state.apply examples
 ```
 
-![]({{ conf.www_root }}/images/functions-1.png)
+![]({{ conf.images }}/functions-1.png)
 
 
 For extra credit, take a look at the [state.pkg

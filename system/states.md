@@ -1,6 +1,6 @@
 ---
 title: States
-permalink: getstarted/system/states.html
+permalink: system/states.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack

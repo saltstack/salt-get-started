@@ -1,13 +1,13 @@
 ---
 title: Python
-permalink: getstarted/system/python.html
+permalink: system/python.html
 type: page
 layout: getstarted.tmpl
 series: Understanding SaltStack
 step: 8
 next:
   title: Continue to SaltStack Fundamentals 
-  url: ../fundamentals/
+  url: fundamentals/
 ---
 
 # Python
