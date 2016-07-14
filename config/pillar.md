@@ -1,6 +1,6 @@
 ---
 title: Pillar
-permalink: /config/pillar.html
+permalink: config/pillar.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
@@ -13,18 +13,18 @@ overview:
   difficulty: 1
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Pillar Explained {.sidebar}
+#### Salt Pillar Explained
 
-Pillar is a system that lets you define secure data that are 'assigned' to
-one or more minions using targets. Pillar data stores values such as ports,
+Salt pillar is a system that lets you define secure data that are 'assigned' to
+one or more minions using targets. Salt pillar data stores values such as ports,
 file paths, configuration parameters, and passwords.
 
 #### {% raw %}{{ }} ?{% endraw %}
 
 Values within the curly braces are [Jinja2](http://jinja.pocoo.org/)
-expressions. We'll discuss Jinja2 later in this guide.
+statements and expressions. We'll discuss Jinja2 later in this guide.
 
 #### pillar.get
 
@@ -34,17 +34,17 @@ more complicated than accessing the pillar dictionary, but it has some
 enhancements that make it a better choice after you get the hang of using
 pillar. 
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
-Pillar is an essential tool to make states re-usable, so we are going to take
-a quick detour from writing states to set it up.
+Salt pillar is an essential component to make Salt states re-usable, so we are going to take
+a quick detour from writing Salt states to set it up.
 
-## Pillar Top File
+## Salt Pillar Top File
 
-Pillar uses a Top file to match pillar data to minions. This Top file is very
-much like the Top file that is used to match states to minions.
+Salt pillar uses a Top file to match Salt pillar data to Salt minions. This Top file is very
+much like the Top file that is used to match Salt states to Salt minions.
 
-Like state functions, pillar is best learned by example. Create the
+Like Salt state functions, Salt pillar is best learned by example. Create the
 `salt-vagrant-demo-master/saltstack/pillar` directory, and then create a new file
 called `top.sls`. Add the following:
 
@@ -61,27 +61,27 @@ following:
 editor: vim
 ```
 
-When pillar data is refreshed, each minion is matched against the targets
-listed in the `top.sls` file. When a minion matches a target, it receives all
-of the pillar SLS files defined in the list underneath that target. Simple,
+When Salt pillar data is refreshed, each Salt minion is matched against the targets
+listed in the `top.sls` file. When a Salt minion matches a target, it receives all
+of the Salt pillar SLS files defined in the list underneath that target. Simple,
 right?
 
-Since our `*` glob matches all minions, each minion receives `default` with
+Since our `*` glob matches all Salt minions, each Salt minion receives `default` with
 a pillar key of `editor` with a value of `vim`.
 
-## Refresh Pillar
+## Refresh Salt Pillar
 
-We are going to use the pillar value we just configured, so let's first refresh
-pillar data on all minions:
+We are going to use the Salt pillar value we just configured, so let's first refresh
+Salt pillar data on all minions:
 
 ``` bash
 salt '*' saltutil.refresh_pillar
 ```
 
-## Pillar in States
+## Salt Pillar in Salt States
 
-Pillar keys are available in a dictionary in states, so you could now update
-the example state from the previous section to use this pillar key:
+Salt pillar keys are available in a dictionary in Salt states, so you could now update
+the example state from the previous section to use this Salt pillar key:
 
 {% raw %}
 ``` yaml
@@ -92,15 +92,15 @@ vim installed:
 {% endraw %}
 
 
-Pillar data is secure, and you can use it to keep portions of your state
-secret. For example, you could add the following key:value pairs to pillar:
+Salt pillar data is secure, and you can use it to keep portions of your Salt state
+secret. For example, you could add the following `key:value` pairs to Salt pillar:
 
 ``` yaml
 ftpusername: me
 ftppassword: oxfm4@8t5gglu^h^&
 ```
 
-And then reference them in a state:
+And then reference them in a Salt state:
 
 {% raw %}
 ``` yaml
@@ -111,24 +111,24 @@ sync directory using lftp:
 ```
 {% endraw %}
 
-## Pillar on the command line
+## Salt Pillar on the command line
 
-For testing or for ad hoc management, you can pass pillar variables directly on
-the command line. These values override any value that might be set in a pillar
+For testing or for ad hoc management, you can pass Salt pillar values directly on
+the command line. These values override any value that might be set in a Salt pillar
 file.
 
 ``` bash
 salt '*' state.apply ftpsync pillar='{"ftpusername": "test", "ftppassword": "0ydyfww3giq8"}'
 ```
 
-## Pillar can customize nearly any part of a state
+## Salt Pillar can customize nearly any part of a Salt state
 
-Hopefully it is becoming clear that you can use the pillar targeting system to
-customize nearly any value in your state files.
+Hopefully it is becoming clear that you can use the Salt pillar targeting system to
+customize nearly any value in your Salt state files.
 
-For example, you could create `prodftp.sls` and a `stageftp.sls` pillar files,
+For example, you could create `prodftp.sls` and `stageftp.sls` Salt pillar files,
 insert different credentials into each, and then target different systems with
-each file. The same `examples.sls` state file is used for each system, but
-different user names and passwords would be used based on the pillar file
+each file. The same `examples.sls` Salt state file is used for each system, but
+different user names and passwords would be used based on the Salt pillar file
 received. 
 

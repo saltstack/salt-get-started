@@ -4,18 +4,18 @@ type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals 
 step: 1
-permalink: /fundamentals/index.html
+permalink: fundamentals/index.html
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### What if I already have a test environment? { .sidebar }
+#### What if I already have a test environment?
 
 Let's use it! These instructions are intended to get you into a working
 environment where you can learn SaltStack without a lot of set up, but your own
 environment can be used instead.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 This Getting Started Guide walks you through the fundamental concepts you need
 to learn as you start using SaltStack. We'll explain how to:
@@ -32,9 +32,9 @@ environment around after you finish to continue to try things out.
 
 ## Demo Environment
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Vagrant Basics { .sidebar }
+#### Vagrant Basics
 
 After you run vagrant up, Vagrant creates and starts several VirtualBox VMs in
 the background. These virtual machines keep running until you shut them down,
@@ -48,7 +48,7 @@ To start them up again, run `vagrant up`.
 
 If you want to start over, you can run `vagrant destroy`, and then `vagrant up`.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 Complete these instructions to set up a simple SaltStack environment.
 
@@ -59,16 +59,16 @@ Complete these instructions to set up a simple SaltStack environment.
 3.  Download <https://github.com/UtahDave/salt-vagrant-demo>. You can use git
     or download a zip of the project directly from GitHub:
 
-    <img height="186px" width="176px" src="../images/github-download.png">
+    <img height="186px" width="176px" src="{{ conf.images }}/github-download.png">
 
 4.  Extract the zip file you downloaded, and then open a command prompt to the extracted directory:
 
-    <img class="nolightbox" height="36px" width="36px" src="../images/windows.png" style="float:left;margin-top: 6px">
+    <img class="nolightbox" height="36px" width="36px" src="{{ conf.images }}/windows.png" style="float:left;margin-top: -6px">
 
     ```bash
     cd %homepath%\Downloads\salt-vagrant-demo-master
     ```
-    <img class="nolightbox" height="36px" width="36px" src="../images/mac.png" style="float:left;margin-top: 6px">
+    <img class="nolightbox" height="36px" width="36px" src="{{ conf.images }}/mac.png" style="float:left;margin-top: -6px">
 
     ```bash
     cd ~\Downloads\salt-vagrant-demo-master

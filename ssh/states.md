@@ -1,6 +1,6 @@
 ---
 title: Apply States 
-permalink: /ssh/states.html
+permalink: ssh/states.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt
@@ -12,7 +12,7 @@ overview:
   difficulty: 2
 parent:
   title: Get Started
-  url: ../index.html
+  url: index.html
 ---
 
 Salt states are fully compatible with Salt SSH, and can be used to quickly
@@ -20,7 +20,7 @@ automate system setup and configuration.
 
 The [Configuration Management](../config/index.html) guide contains a detailed
 explanation of creating Salt states. All of the information in that guide
-(including pillar and Salt's file server) can be used to apply states using
+(including Salt pillar and Salt's file server) can be used to apply states using
 Salt SSH.
 
 --------------

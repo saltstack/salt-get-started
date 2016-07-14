@@ -1,6 +1,6 @@
 ---
 title: Create a Salt State
-permalink: /fundamentals/states.html
+permalink: fundamentals/states.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -12,13 +12,13 @@ overview:
   difficulty: 2
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Terminology  { .sidebar } 
+#### Terminology  
 
 -|-
-| Formula | A collection of state and pillar files that configure an application or system component. Most Formulas are made up of several states spread across multiple state files.|
-| State | A reusable declaration that configures a specific part of a system. Each state is defined using a state declaration.|
+| Formula | A collection of Salt state and Salt pillar files that configure an application or system component. Most formulas are made up of several Salt states spread across multiple Salt state files.|
+| State | A reusable declaration that configures a specific part of a system. Each Salt state is defined using a state declaration.|
 | State Declaration | A top level section of a state file that lists the state function calls and arguments that make up a state. Each state declaration starts with a unique ID.|
 | State Functions | Commands that you call to perform a configuration task on a system.|
 | State File | A file with an SLS extension that contains one or more state declarations.|
@@ -42,7 +42,7 @@ section appears first in the file. SaltStack also provides a powerful requisite
 system that lets you explicitly determine order, which we'll cover in a later
 tutorial.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 Remote execution is a big time saver, but it has some shortcomings. Most tasks
 you perform are a combination of many commands, tests, and operations, each
@@ -78,7 +78,7 @@ package names for the `pkgs` argument.
 
 Save this example as `salt-vagrant-demo-master/saltstack/salt/nettools.sls`:
 
-![](../images/vagrant-nettools.png)
+![]({{ conf.images }}/vagrant-nettools.png)
 
 Lets go ahead and test our state. We'll learn about a more powerful method to
 apply states, called highstate, in the next section, but for now you can use
@@ -96,12 +96,12 @@ state to any set of Salt minions. For now just pick one or all of your Salt
 minions. If everything goes well, you'll get output similar to this (click to
 enlarge):
 
-![](../images/vagrant-state-apply.png)
+![]({{ conf.images }}/vagrant-state-apply.png)
 
 If that is not cool enough, apply the state again to the same Salt minion(s),
 and look at the output:
 
-![](../images/vagrant-state-apply2.png)
+![]({{ conf.images }}/vagrant-state-apply2.png)
 
 Salt determines that the system is already in the correct state, so nothing is
 changed (this is called idempotent in academic circles). Nice.

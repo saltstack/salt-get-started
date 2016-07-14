@@ -1,15 +1,15 @@
 ---
 title: Event-Driven Infrastructure
-permalink: /event/index.html
+permalink: event/index.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
 step: 1
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### What can I do with events? {.sidebar}
+#### What can I do with events?
 
 Here are just a few of the things our users do with Salt's event driven infrastructure:
 
@@ -19,7 +19,7 @@ Here are just a few of the things our users do with Salt's event driven infrastr
 - Automatically scale cloud resources.
 - Monitor disk, processor, ram, and other system stats and take action outside of defined thresholds.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 If you completed the previous guides, you've learned how to use Salt to execute commands on
 remote systems, and how to define reusable templates to configure systems.

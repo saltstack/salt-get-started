@@ -1,6 +1,6 @@
 ---
 title: Custom Events
-permalink: /event/custom.html
+permalink: event/custom.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
@@ -16,15 +16,15 @@ overview:
 In addition to the built-in events, you can enable some additional events in
 the Salt system, as well as generate your own events.
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Enabling Events {.sidebar}
+#### Enabling Events
 
 The additional events described here are enabled by changing settings in your
-[Master
+[Salt master
 config](https://docs.saltstack.com/en/latest/ref/configuration/master.html).
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 ## Presence Events
 
@@ -37,10 +37,10 @@ newly connected or disconnected minions.
 presence_events: True
 ~~~
 
-## State Events
+## Salt State Events
 
-Enabling state events causes the Salt minion to send progress events as each
-function in a state run completes execution.
+Enabling Salt state events causes the Salt minion to send progress events as each
+function in a Salt state run completes execution.
 
 ~~~ yaml
 state_events: True
@@ -48,8 +48,8 @@ state_events: True
 
 ## Fire an event when a state completes
 
-If you have a long configuration job that involves several states, you can fire
-an event when a state completes by adding the `fire_event` argument:
+If you have a long configuration job that includes several Salt states, you can fire
+an event when each Salt state completes by adding the `fire_event` argument:
 
 ~~~ yaml
 nano installed:

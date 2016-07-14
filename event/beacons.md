@@ -1,6 +1,6 @@
 ---
 title: Beacons
-permalink: /event/beacons.html
+permalink: event/beacons.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
@@ -54,7 +54,7 @@ beacons:
 
 ### Beacon Monitoring Interval
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
 #### Avoiding Event Loops
 
@@ -73,7 +73,7 @@ beacons:
 
 As with most loop conditions, you'll probably find out the hard way when you need to add this.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 Beacons monitor on a 1-second interval by default. To set a different interval,
 provide an interval argument to a beacon. The following beacons run on 5- and

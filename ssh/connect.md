@@ -1,6 +1,6 @@
 ---
 title: Connect
-permalink: /ssh/connect.html
+permalink: ssh/connect.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt
@@ -17,23 +17,23 @@ Let's learn how Salt SSH stores connection details and connects to agentless sys
 
 ## Roster File
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Extending the Roster {.sidebar}
+#### Extending the Roster
 
 As is common in Salt, the roster system can be extended. You can currently use any of the following data sources to populate the Salt roster:
 
-- [ansible](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.ansible.html#module-salt.roster.ansible)
-- [cache](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.cache.html#module-salt.roster.cache)
-- [cloud](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.cloud.html#module-salt.roster.cloud)
-- [clustershell](salt.roster.clustershell)
-- [flat (default)](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.flat.html#module-salt.roster.flat)
-- [range (in development)](https://docs.saltstack.com/en/develop/ref/roster/all/salt.roster.range.html#module-salt.roster.range)
-- [scan](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.scan.html#module-salt.roster.scan)
+- [ansible](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.ansible.html)
+- [cache](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.cache.html)
+- [cloud](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.cloud.html)
+- [clustershell](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.clustershell.html)
+- [flat (default)](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.flat.html)
+- [range (in development)](https://docs.saltstack.com/en/develop/ref/roster/all/salt.roster.range.html)
+- [scan](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.scan.html)
 
 This guide uses the flat file roster.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 By default, Salt uses a YAML file to store connection details for agentless systems, called the roster. A basic roster file contains an ID, a host, and a user:
 

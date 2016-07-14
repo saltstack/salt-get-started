@@ -1,21 +1,21 @@
 ---
 title: Introduction
-permalink: /ssh/index.html
+permalink: ssh/index.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt
 step: 1
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### SSH {.sidebar}
+#### SSH
 
 All communication with the managed system when using Salt agentless is executed over SSH, which makes management substantially slower than standard Salt with ZeroMQ.
 
 Though for the record, it is still much faster than logging in!
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 You can use Salt agentless to run Salt commands on a system without installing a Salt minion.
 The only requirements on the remote system are SSH and Python.

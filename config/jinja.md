@@ -1,6 +1,6 @@
 ---
 title: Jinja
-permalink: /config/jinja.html
+permalink: config/jinja.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
@@ -14,27 +14,27 @@ overview:
   difficulty: 3
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### More Jinja2 {.sidebar}
+#### More Jinja2
 
 Jinja2 is widely used, and there is a lot more detail in the [Jinja2
 docs](http://jinja.pocoo.org/docs/dev/).
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
-Salt includes the Jinja2 templating engine which can be used in state files,
-pillar files, and other files managed by Salt.
+Salt includes the Jinja2 templating engine which can be used in Salt state files,
+Salt pillar files, and other files managed by Salt.
 
 Salt lets you use Jinja to access minion configuration values, grains and
-pillar data, and call Salt execution modules. This is in additional to the
+Salt pillar data, and call Salt execution modules. This is in additional to the
 standard control structures and Python data types that are already available in
 Jinja.
 
 ## Conditionals
 
 One of the most common uses of Jinja is to insert conditional statements into
-pillar files. 
+Salt pillar files. 
 
 Because many distros have different package names, you can use the `os` grain
 to set platform specific paths, package names, and other values.
@@ -53,11 +53,11 @@ git: git-core
 ```
 {% endraw %}
 
-As you can see, grains are available in a dictionary much like pillar. This
-example checks grain values to set OS specific pillar keys.
+As you can see, Salt grains are available in a dictionary much like Salt pillar. This
+example checks Salt grain values to set OS specific Salt pillar keys.
 
 Save the snippet above to the saltstack/pillar/common.sls file, and then run
-the following commands to refresh and then list pillar values for each minions:
+the following commands to refresh and then list Salt pillar values for each minions:
 
 ``` bash
 salt '*' saltutil.refresh_pillar
@@ -65,7 +65,7 @@ salt '*' pillar.items
 ```
 Your minions should list the values set for the `Debian` OS family.
 
-After setting these values, when you apply the following state:
+After setting these values, when you apply the following Salt state:
 
 {% raw %}
 ``` yaml
@@ -80,7 +80,7 @@ installed on Debian.
 
 ## Loops
 
-Loops are useful for creating users and folders in states.
+Loops are useful for creating users and folders in Salt states.
 
 {% raw %}
 ``` yaml
@@ -103,9 +103,9 @@ Loops are useful for creating users and folders in states.
 ```
 {% endraw %}
 
-In general, you should try to keep your states as simple as possible. If you
+In general, you should try to keep your Salt states as simple as possible. If you
 find yourself writing complex Jinja, you should consider breaking a task into
-multiple states, or writing a custom Salt [execution
+multiple Salt states, or writing a custom Salt [execution
 module](https://docs.saltstack.com/en/latest/ref/modules/index.html#modules-are-easy-to-write)
 for the task (this is easier than it sounds, especially if you know some
 Python!).

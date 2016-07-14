@@ -1,6 +1,6 @@
 ---
 title: Remote Execution
-permalink: /ssh/remotex.html
+permalink: ssh/remotex.html
 type: page
 layout: getstarted.tmpl
 series: Agentless Salt
@@ -30,16 +30,16 @@ salt-ssh '*' cmd.run 'ls -l /etc'
 All targeted systems *simultaneously* and *immediately* execute this command and
 then return the output to the Salt master. Feeling the power?
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Have We Met? { .sidebar }
+#### Have We Met?
 
 If you completed the [SaltStack Fundamentals](../fundamentals/index.html)
 guide, this section is likely familiar. We copied these commands directly from that guide,
 replacing `salt` with `salt-ssh`. Any command you can run using Salt you can
 run using Salt SSH.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 
 #### Salt Execution Functions

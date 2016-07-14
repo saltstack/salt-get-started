@@ -17,7 +17,7 @@ provides orchestration, configuration management, event reactors, cloud
 provisioning, and more, all built around the SaltStack high-speed
 communication bus.
 
-The Salt Master establishes persistent connections to all managed
+The Salt master establishes persistent connections to all managed
 system, and uses lightweight protocols to enable real-time communication
 across thousands of managed systems.
 

@@ -10,9 +10,9 @@ parent:
 
 # SaltStack Flexibility
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### We Love All of You {.sidebar}
+#### We Love All of You
 
 Or at least all of your management approaches. When enthusiasts talk
 about the 'best' management approach, they are usually right about a
@@ -23,7 +23,7 @@ SaltStack is focused on creating the best set of management tools
 available anywhere, and then providing as many ways as we can think of
 to let you use them. No agent? No server? No problem.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 Every management tool and their Git forks claim to be flexible, but when
 we say flexible at SaltStack, we mean *entire-management-approach

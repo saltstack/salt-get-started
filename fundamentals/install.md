@@ -1,6 +1,6 @@
 ---
 title: Install SaltStack
-permalink: /fundamentals/install.html
+permalink: fundamentals/install.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -70,9 +70,9 @@ is using the bootstrap script. This script installs SaltStack with a couple of
 commands on most operating systems. <a id="install-modal" href="#">Show me how
 to install using bootstrap!</a>
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-<span id="install-video-modal"><img class="imgcenter nolightbox" width="75%" src="../images/install-video.png"></span>
+<span id="install-video-modal"><img class="imgcenter nolightbox" width="75%" src="{{ conf.images }}/install-video.png"></span>
 
 #### Packages
 
@@ -87,9 +87,9 @@ methods are documented at <http://repo.saltstack.com>.
 
 #### Architecture 101
 
-![](../images/arch2.png)
+![]({{ conf.images }}/arch2.png)
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 ## Accept Connections
 
@@ -111,7 +111,7 @@ After you connect, run the following command to become the root user:
 sudo su
 ```
 
-![](../images/vagrant-ssh-master.png)
+![]({{ conf.images }}/vagrant-ssh-master.png)
 
 #### View all keys
 
@@ -136,7 +136,7 @@ salt-key --accept=<key>
 salt-key --accept-all
 ```
 
-![](../images/vagrant-keys.png)
+![]({{ conf.images }}/vagrant-keys.png)
 
 ## Send a Command
 
@@ -147,7 +147,7 @@ verify that your Salt minions are listening:
 salt '*' test.ping
 ```
 
-![](../images/vagrant-test.png)
+![]({{ conf.images }}/vagrant-test.png)
 
 If you don't see all of your Salt minions respond, well that is what happens
 when you set things up manually. You probably typed something wrong, didn't

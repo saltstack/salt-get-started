@@ -21,16 +21,17 @@ SaltStack.
 |                          |                          | This system is used to   |
 |                          |                          | send commands and        |
 |                          |                          | configurations to the    |
-|                          |                          | Salt Minion that is      |
+|                          |                          | Salt minion that is      |
 |                          |                          | running on managed       |
 |                          |                          | systems.                 |
 +--------------------------+--------------------------+--------------------------+
 | Salt Minions             | ![](images/minions.png)  | Managed system.          |
-|                          |                          |                          |
-|                          |                          | This system receives     |
+|                          |                          | This system runs the     | 
+|                          |                          | Salt minion which        |
+|                          |                          | receives                 |
 |                          |                          | commands and             |
 |                          |                          | configuration from the   |
-|                          |                          | Salt Master.             |
+|                          |                          | Salt master.             |
 +--------------------------+--------------------------+--------------------------+
 | Execution Modules        | ![](images/remote-exe.png| Ad hoc commands executed |
 |                          | )                        | from the command line    |
@@ -68,25 +69,25 @@ SaltStack.
 |                          |                          | on the Salt Master and   |
 |                          |                          | then 'assigned' to one   |
 |                          |                          | or more minions using    |
-|                          |                          | targets. Pillar data     |
+|                          |                          | targets. Salt pillar data     |
 |                          |                          | stores values such as    |
 |                          |                          | ports, file paths,       |
 |                          |                          | configuration            |
 |                          |                          | parameters, and          |
 |                          |                          | passwords.               |
 +--------------------------+--------------------------+--------------------------+
-| Top File                 | ![](images/top-file.png) | Matches Formulas and     |
-|                          |                          | pillar data to Salt      |
-|                          |                          | Minions.                 |
+| Top File                 | ![](images/top-file.png) | Matches formulas and     |
+|                          |                          | Salt pillar data to Salt      |
+|                          |                          | minions.                 |
 +--------------------------+--------------------------+--------------------------+
 | Runners                  | ![](images/runners.png)  | Modules that execute on  |
-|                          |                          | the Salt Master to       |
+|                          |                          | the Salt master to       |
 |                          |                          | perform supporting       |
-|                          |                          | tasks. Runners report    |
+|                          |                          | tasks. Salt runners report    |
 |                          |                          | job status, connection   |
 |                          |                          | status, read data from   |
 |                          |                          | external APIs, query     |
-|                          |                          | connected Salt Minions,  |
+|                          |                          | connected Salt minions,  |
 |                          |                          | and more.                |
 |                          |                          |                          |
 |                          |                          | For example, the         |
@@ -97,11 +98,11 @@ SaltStack.
 |                          |                          | systems.                 |
 +--------------------------+--------------------------+--------------------------+
 | Returners                | ![](images/returners.png | Send data returned by    |
-|                          | )                        | Salt Minions to another  |
+|                          | )                        | Salt minions to another  |
 |                          |                          | system, such as a        |
-|                          |                          | database. Returners can  |
-|                          |                          | run on the Salt Minion   |
-|                          |                          | or on the Salt Master.   |
+|                          |                          | database. Salt returners can  |
+|                          |                          | run on the Salt minion   |
+|                          |                          | or on the Salt master.   |
 +--------------------------+--------------------------+--------------------------+
 | Reactor                  | ![](images/reactor.png)  | Trigger reactions when   |
 |                          |                          | events occur in your     |
@@ -115,5 +116,5 @@ SaltStack.
 +--------------------------+--------------------------+--------------------------+
 | Salt SSH                 | ![](images/ssh.png)      | Run Salt commands over   |
 |                          |                          | SSH on systems that do   |
-|                          |                          | not have a Salt Minion.  |
+|                          |                          | not have a Salt minion.  |
 +--------------------------+--------------------------+--------------------------+

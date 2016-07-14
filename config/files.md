@@ -1,6 +1,6 @@
 ---
 title: Manage Files
-permalink: /config/files.html
+permalink: config/files.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Configuration Management
@@ -13,12 +13,12 @@ overview:
   difficulty: 1
 parent:
   title: Get Started
-  url: ../index.html
+  url: index.html
 ---
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### File Templates {.sidebar}
+#### File Templates
 
 Salt lets you manage files using templates and variables. Take a look at the
 [salt.states.file
@@ -34,13 +34,13 @@ to greatly simplify this workflow.
 
 For example, if your `http.conf` is sourced in a Git repo, each time a change
 is committed all targeted systems would receive the change the next time the
-`file.managed` state runs.
+`file.managed` Salt state runs.
 
 See the [Git Fileserver Backend
 Walkthrough](https://docs.saltstack.com/en/latest/topics/tutorials/gitfs.html#git-fileserver-backend-walkthrough)
 to learn how to set up your own Git repo as a Salt file server backend.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 Getting the correct files on a system is often more challenging than installing
 the correct software. Salt has a built-in file server that can deliver files
@@ -48,14 +48,14 @@ and folders to managed systems.
 
 ## salt://
 
-You are familiar with placing state files in the `srv/salt` directory, but what
+You are familiar with placing Salt state files in the `srv/salt` directory, but what
 you might not know is that any other files and folders you place in this directory
-are also available to your Salt minions. You can reference these files in states using
+are also available to your Salt minions. You can reference these files in Salt states using
 the `salt://` URL followed by the path to the file relative to the `srv/salt` directory.
 
 ## File.Managed 
 
-This state function lets you manage a local file by specifying the source file
+This Salt state function lets you manage a local file by specifying the source file
 on the Salt master.
 
 ~~~ yaml
@@ -68,7 +68,7 @@ deploy the http.conf file:
 Since the `source` path starts with `salt://`, we can determine that the source
 for this file is `/srv/salt/apache/http.conf` on our Salt master.
 
-Each time this state is applied, Salt makes sure that the local file matches
+Each time this Salt state is applied, Salt makes sure that the local file matches
 the version on the server. This helps prevent configuration drift and helps
 make sure that applications are configured identically on different systems.
 
@@ -109,7 +109,7 @@ update lftp conf:
 
 ## File.Recurse
 
-This state function copies an entire directory.
+This Salt state function copies an entire directory.
 
 ~~~ yaml
 copy some files to the web server:
@@ -121,7 +121,7 @@ copy some files to the web server:
 ## Summary
 
 You should now have a better understanding of SaltStack's configuration
-management system, with enough knowledge to start writing your own states. If
+management system, with enough knowledge to start writing your own Salt states. If
 you are looking for inspiration, the [SaltStack Formula
 Repo](https://github.com/saltstack-formulas) contains many examples.
 

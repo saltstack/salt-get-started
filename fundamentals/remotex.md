@@ -1,6 +1,6 @@
 ---
 title: Execute Commands
-permalink: /fundamentals/remotex.html
+permalink: fundamentals/remotex.html
 type: page
 layout: getstarted.tmpl
 series: SaltStack Fundamentals
@@ -20,13 +20,13 @@ can easily see what did and didn’t work.
 
 10 minutes to measurable productivity? Not bad.
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Command Syntax { .sidebar }
+#### Command Syntax
 
 Salt commands are executed using a common structure:
 
-<img width="100%" src="../images/cmd-syntax.png">
+<img width="100%" src="{{ conf.images }}/cmd-syntax.png">
 
 **target**: Determines which systems apply the command. Uses hostname globbing
 by default, but there are many other ways to select and filter that we'll get
@@ -59,7 +59,7 @@ salt '*' sys.doc pkg
 salt '*' sys.doc pkg.install
 ```
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 #### Run a Shell Command
 
@@ -72,7 +72,7 @@ salt '*' cmd.run 'ls -l /etc'
 All managed systems *simultaneously* and *immediately* execute this command and
 then return the output to the Salt master. Feeling the power?
 
-![](../images/vagrant-cmd-run.png)
+![]({{ conf.images }}/vagrant-cmd-run.png)
 
 #### Salt Execution Functions
 
@@ -90,7 +90,7 @@ Resist the urge to shell out. Learn the ways of the Salt execution functions.
 salt '*' disk.usage
 ```
 
-![](../images/vagrant-disk.usage.png)
+![]({{ conf.images }}/vagrant-disk.usage.png)
 
 #### Install a Package
 
@@ -98,7 +98,7 @@ salt '*' disk.usage
 salt '*' pkg.install cowsay
 ```
 
-![](../images/vagrant-pkg.install.png)
+![]({{ conf.images }}/vagrant-pkg.install.png)
 
 #### List network interfaces
 
@@ -106,7 +106,7 @@ salt '*' pkg.install cowsay
 salt '*' network.interfaces
 ```
 
-![](../images/vagrant-network.interfaces.png)
+![]({{ conf.images }}/vagrant-network.interfaces.png)
 
 These are just a few examples of the many execution functions available.
 

@@ -1,6 +1,6 @@
 ---
 title: Watching Events
-permalink: /event/events.html
+permalink: event/events.html
 type: page
 layout: getstarted.tmpl
 series: Event-Driven Infrastructure
@@ -17,7 +17,7 @@ overview:
 Salt's internal components communicate with each other by sending and listening
 to events. In Salt, events are sent for about everything you could imagine:
 
-- Minion connects
+- Salt minion connects
 - Key is accepted or rejected
 - Job is sent
 - Job results are returned from a minion
@@ -29,15 +29,15 @@ returns from targeted minions.
 
 ## Watching Events
 
-{: section gs-sidebar :}
+{: section sidebar :}
 
-#### Salt Runners {.sidebar}
+#### Salt Runners
 
 Runners are modules that execute on the Salt master to perform supporting
 tasks. Runners report job status, show connection status, display events, read
-data from external APIs, query connected Salt Minions, and more.
+data from external APIs, query connected Salt minions, and more.
 
-{: end gs-sidebar :}
+{: end sidebar :}
 
 Salt provides a runner that displays events in real-time as they are received
 on the Salt master. 
