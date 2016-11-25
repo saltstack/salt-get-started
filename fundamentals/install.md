@@ -105,11 +105,6 @@ following command to log in to your Salt master:
 vagrant ssh master
 ```
 
-After you connect, run the following command to become the root user:
-
-``` bash
-sudo su
-```
 
 ![]({{ conf.images }}/vagrant-ssh-master.png)
 
@@ -119,7 +114,7 @@ On the Salt master, you can quickly view all Salt minion connections and view
 whether the connection is accepted, rejected, or pending.
 
 ``` bash
-salt-key --list-all
+sudo salt-key --list-all
 ```
 
 #### Accept a specific key
@@ -127,13 +122,13 @@ salt-key --list-all
 Before a Salt minion can connect, you must accept its key.
 
 ``` bash
-salt-key --accept=<key>
+sudo salt-key --accept=<key>
 ```
 
 #### Accept all keys
 
 ``` bash
-salt-key --accept-all
+sudo salt-key --accept-all
 ```
 
 ![]({{ conf.images }}/vagrant-keys.png)
@@ -144,7 +139,7 @@ After you have accepted each key, send a command from your Salt master to
 verify that your Salt minions are listening:
 
 ``` bash
-salt '*' test.ping
+sudo salt '*' test.ping
 ```
 
 ![]({{ conf.images }}/vagrant-test.png)
