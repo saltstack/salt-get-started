@@ -107,6 +107,27 @@ base:
     - nettools
 ```
 
+If you are not using the Vagrant demo files you'll need to create a directory
+called common alongside top.sls, and add two files inside the common directory.
+
+common/init.sls:
+
+```bash
+include:
+  - common.packages
+```
+
+common/packages.sls:
+
+```bash
+common_packages:
+  pkg.installed:
+    - pkgs:
+      - htop
+      - strace
+      - vim
+```
+
 Hopefully it is clear to you what will happen when this is applied, so let's
 try it. On your Salt master, run the following command to apply the Top file:
 
