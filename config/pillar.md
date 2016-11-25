@@ -45,8 +45,8 @@ Salt pillar uses a Top file to match Salt pillar data to Salt minions. This Top 
 much like the Top file that is used to match Salt states to Salt minions.
 
 Like Salt state functions, Salt pillar is best learned by example. Create the
-`salt-vagrant-demo-master/saltstack/pillar` directory, and then create a new file
-called `top.sls`. Add the following:
+`salt-vagrant-demo-master/saltstack/pillar` directory (mapped by Vagrant to /srv/pillar),
+and then create a new file called `top.sls`. Add the following:
 
 ``` yaml
 base:
