@@ -71,7 +71,7 @@ Complete these instructions to set up a simple SaltStack environment.
     <img class="nolightbox" height="36px" width="36px" src="{{ conf.images }}/mac.png" style="float:left;margin-top: -6px">
 
     ```bash
-    cd ~\Downloads\salt-vagrant-demo-master
+    cd ~/Downloads/salt-vagrant-demo-master
     ```
 
 5.  Run vagrant up to start the demo environment:
