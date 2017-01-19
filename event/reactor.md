@@ -62,7 +62,7 @@ section:
 ``` yaml
 reactor:
   - 'my/custom/event/tag':
-  - salt://reactor/customevent.sls
+    - salt://reactor/customevent.sls
 ```
 This tells the Salt master that anytime it sees an event that contains
 `my/custom/event/tag`, call the `customevent.sls` file.
