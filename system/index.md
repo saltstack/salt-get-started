@@ -7,7 +7,7 @@ series: Understanding SaltStack
 step: 1
 ---
 
-You can get a general understanding of how Salt works by seeing it in action. That said, there are many things going on under the hood that can be hard to notice as data flies past on the console. This section of the Get Started tutorial explains how Salt works, the Salt subsystems, and how Salt's modular architecture let's you use and extend Salt to manage your entire infrastructure.
+You can get a general understanding of how Salt works by seeing it in action. That said, there are many things going on under the hood that can be hard to notice as data flies past on the console. This section of the Get Started tutorial explains how Salt works, the Salt subsystems, and how Salt's modular architecture lets you use and extend Salt to manage your entire infrastructure.
 
 Before we get into the specifics of the Salt components, it is helpful to understand a few things about the way Salt approaches infrastructure management.
 
