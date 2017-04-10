@@ -77,7 +77,7 @@ At each step, the subsystem delegates its work to the
 
 ## Flexibility
 
-This flexibility makes salt an extremely powerful and customizable tool,
+This flexibility makes Salt an extremely powerful and customizable tool,
 but it also makes it a bit hard to answer standard questions when you
 are learning about the tool.
 
