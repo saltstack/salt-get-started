@@ -12,7 +12,7 @@ next:
 
 # Python
 
-I know that we said earlier that you don't need to be able to write Python or other code to use Salt, which is true. However, it is useful in many circumstances to be able to *read* Python, or at least Python function documentation, which turns out is much easier that writing Python.
+I know that we said earlier that you don't need to be able to write Python or other code to use Salt, which is true. However, it is useful in many circumstances to be able to *read* Python, or at least Python function documentation, which turns out is much easier than writing Python.
 
 This section explains the Python basics that help you better understand how Salt works.
 
