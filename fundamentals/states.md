@@ -80,7 +80,7 @@ Save this example as `salt-vagrant-demo-master/saltstack/salt/nettools.sls`:
 
 ![]({{ conf.images }}/vagrant-nettools.png)
 
-Lets go ahead and test our state. We'll learn about a more powerful method to
+Let's go ahead and test our state. We'll learn about a more powerful method to
 apply states, called highstate, in the next section, but for now you can use
 the state.apply command to apply a state directly from the command line.
 
