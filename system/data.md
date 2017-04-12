@@ -30,9 +30,9 @@ Grains are used to get data about your systems. Grains are static information ab
 
 Grains are gathered automatically when the minion starts and are refreshed periodically or by using a remote execution command.
 
-So what can you do with grains? You can gather inventory using the grains execution module, which lets you list all grains, find systems with a specific grain value, and so on.
+So what can you do with grains? You can gather an inventory using the grains execution module, which lets you list all grains, find systems with a specific grain value, and so on.
 
-Grains are also an integral part of the targeting system. Grains are used to target salt states and Salt pillar data, which leads us directly to the next minion data subsystem: Salt pillar.
+Grains are also an integral part of the targeting system. Grains are used to target Salt states and Salt pillar data, which leads us directly to the next minion data subsystem: Salt pillar.
 
 
 ## Salt Pillar
