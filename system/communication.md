@@ -26,7 +26,7 @@ Salt communicates with managed systems using a [publish-subscribe](https://en.wi
 <img height="30px" class="imgcenter" src="{{ conf.images }}/basic-comm.png">
 
 -|-
-|**Publisher**|(port 4505) All Salt minions establish a persistent connection to the publisher port where they listen for messages. Commands are sent asynchronously to all connections over this port, which enables commands to be executed over large numbers of systems simultaniously.|
+|**Publisher**|(port 4505) All Salt minions establish a persistent connection to the publisher port where they listen for messages. Commands are sent asynchronously to all connections over this port, which enables commands to be executed over large numbers of systems simultaneously.|
 |**Request Server**|(port 4506) Salt minions connect to the request server as needed to send results to the Salt master, and to securely request files and minion-specific data values (called Salt pillar). Connections to this port are 1:1 between the Salt master and Salt minion (not asynchronous).|
 
 ## Salt Minion Authentication
