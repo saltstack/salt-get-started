@@ -12,7 +12,7 @@ next:
 
 # Python
 
-I know that we said earlier that you don't need to be able to write Python or other code to use Salt, which is true. However, it is useful in many circumstances to be able to *read* Python, or at least Python function documentation, which turns out is much easier that writing Python.
+I know that we said earlier that you don't need to be able to write Python or other code to use Salt, which is true. However, it is useful in many circumstances to be able to *read* Python, or at least Python function documentations, which turns out is much easier that writing Python.
 
 This section explains the Python basics that help you better understand how Salt works.
 
@@ -28,7 +28,7 @@ The modules that let you format job results (`salt.outputters`) are enabled usin
 
 {: end sidebar :}
 
-In Salt, each subsystem plug-in is a Python module. In Salt terms, you can think of a module as a group of functions (aka commands) that manage an application (mysql, docker), a system component (disk, file), or interact with an external system (gitfs).
+In Salt, each subsystem plug-in is a Python module. In Salt terms, you can think of a module as a group of functions (aka commands) that manage an application (mysql, docker), a system component (disk, file) or interact with an external system (gitfs).
 
 Here is what you need to know:
 
@@ -50,7 +50,7 @@ Arguments are expressed differently between remote execution and states, so we'l
 
 ### Execution function arguments
 
-Execution arguments are passed as additional values when calling Salt on the command line, either as just a value, or as `argument=value`. Required values are usually passed in a specific order as the value only separated by spaces, and optional arguments that have a default value are passed as `argument=value`.
+Execution arguments are passed as additional values when calling Salt on the command line, either as just a value, or as `argument=value`. Required values are usually passed in a specific order as they are only separated by spaces, and optional arguments that have a default value are passed as `argument=value`.
 
 For example, take a look at the function signature for `user.add` that appears in the Salt docs (`user` is a virtual module, so we are looking at the docs for `useradd`):
 
