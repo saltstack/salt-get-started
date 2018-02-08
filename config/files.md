@@ -7,7 +7,7 @@ series: SaltStack Configuration Management
 step: 7
 overview:
   goals:
-    - Deliver files and folders to manages systems
+    - Deliver files and folders to managed systems
     - Understand Salt file templates
   time: 10
   difficulty: 1
