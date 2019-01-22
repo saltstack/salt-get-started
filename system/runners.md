@@ -9,7 +9,7 @@ step: 6
 
 # Salt Runners
 
-The runner subsystem provides Salt modules that execute **on the Salt master** (remember that execution and state modules run simultaniously and independently on each targeted minion, not on the Salt master). 
+The runner subsystem provides Salt modules that execute **on the Salt master** (remember that execution and state modules run simultaneously and independently on each targeted minion, not on the Salt master). 
 
 Runners are available to list job status, view events in real-time, manage Salt's fileserver, view Salt mine data, send wake-on-lan to minions, call webhooks and make other http requests, and much more.
 
