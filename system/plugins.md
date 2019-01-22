@@ -77,7 +77,7 @@ At each step, the subsystem delegates its work to the
 
 ## Flexibility
 
-This flexibility makes salt an extremely powerful and customizable tool,
+This flexibility makes Salt an extremely powerful and customizable tool,
 but it also makes it a bit hard to answer standard questions when you
 are learning about the tool.
 
@@ -85,7 +85,7 @@ For fun, let's take the "technically accurate" approach and answer a few common 
 
 - *How do you start Salt jobs?* - From any interface that can call Python, a REST API, the command line, or by using Salt's built-in scheduler.
 
-- *How does salt format results?* -  YAML, JSON, plain text, python data
+- *How does salt format results?* -  YAML, JSON, plain text, Python data
   structure, and several other formats, and you can change the format anytime using a single argument.
   
 - *What format does Salt use for configuration declarations?* - Choose from one of 15 supported formats depending on your use case, and you also have your choice of templating languages. The format is specified on a per file basis, so you can use multiple formats simultaneously.
