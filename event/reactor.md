@@ -62,7 +62,7 @@ section:
 ``` yaml
 reactor:
   - 'my/custom/event/tag':
-  - salt://reactor/customevent.sls
+    - salt://reactor/customevent.sls
 ```
 This tells the Salt master that anytime it sees an event that contains
 `my/custom/event/tag`, call the `customevent.sls` file.
@@ -268,7 +268,7 @@ called `customevent.sls` in that directory. Next, add one of the reactor SLS
 examples from this section, or create your own. Make sure you update the target
 to target one of your systems, for example `minion1`.
 
-From the command-line on your Salt master, trigger the following custom event:
+From the command-line on your Salt minion, trigger the following custom event:
 
 ``` bash
 sudo salt-call event.send 'my/custom/event/tag' 
