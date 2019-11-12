@@ -38,7 +38,7 @@ Configuration | Configures targeted systems to match a desired state.
 
 #### What does it mean to be "pluggable"?
 
-Salt doesn't define a built-in way to perform the task for any subsystem, each subsystem simply delegates its work to a plug-in. Salt provides a default plug-in for each system, but changing the plug-in in most cases is as simple as updating a configuration file. This pluggability is what makes Salt so flexibile. 
+Salt doesn't define a built-in way to perform the task for any subsystem, each subsystem simply delegates its work to a plug-in. Salt provides a default plug-in for each system, but changing the plug-in in most cases is as simple as updating a configuration file. This pluggability is what makes Salt so flexible.
 
 {: end sidebar :}
 
