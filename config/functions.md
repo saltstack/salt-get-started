@@ -269,9 +269,9 @@ restart vsftpd:
 ```
 
 Execution functions (short for "remote execution functions") are the commands
-that you call from the `salt` command line, and they start with `salt.module.*`. 
+that you call from the `salt` command line, and they start with `salt.modules.*`. 
 
-(Bit of trivia: Execution functions start with `module.*` since they were the
+(Bit of trivia: Execution functions start with `modules.*` since they were the
 first and only modules available in the initial versions of Salt. If Salt is
 ever rewritten we should probably start these with `execution.*` instead.)
 

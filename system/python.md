@@ -22,7 +22,7 @@ This section explains the Python basics that help you better understand how Salt
 
 #### Modules are used differently by each subsystem!
 
-If you glanced at the salt source folder, you are probably feeling a bit overwhelmed by Python code about now. Fortunately, there are only two module types that you really need to interact with directly: execution modules (`salt.module`) and state modules (`salt.states`).
+If you glanced at the salt source folder, you are probably feeling a bit overwhelmed by Python code about now. Fortunately, there are only two module types that you really need to interact with directly: execution modules (`salt.modules`) and state modules (`salt.states`).
 
 The modules that let you format job results (`salt.outputters`) are enabled using the `--out` argument when calling the `salt` command. Most of the other subsystem modules are enabled in the Salt master or minion configuration files, including auth, beacons, engines, fileserver, pillar, proxy, returners, and probably one or two others that I missed. And some you don't have to do anything with, such as grains, since they do their work automatically.
 
@@ -34,7 +34,7 @@ Here is what you need to know:
 
 - All of the modules are in the `salt` folder in the source. A separate folder exists for each subsystem, and each module is a separate file ending in `.py`.
 
-- Modules are namespaced in the format salt.*subsystem*.*module*. This namespace is visible in the docs, so you can quickly tell which type of subystem module you are viewing. One point of confusion: execution modules start with `salt.module` since they were the first and only modules available in the initial versions of Salt (when time travel is invented we should probably start these with `salt.execution` instead).
+- Modules are namespaced in the format salt.*subsystem*.*module*. This namespace is visible in the docs, so you can quickly tell which type of subystem module you are viewing. One point of confusion: execution modules start with `salt.modules` since they were the first and only modules available in the initial versions of Salt (when time travel is invented we should probably start these with `salt.execution` instead).
 
 - Modules contain as many or as few functions as are needed. The file execution module (`salt.modules.file`) has a lot of functions because file management is sort of a big deal. The uwsgi stats server execution module (`salt.modules.uwsgi`) has just one.
 
