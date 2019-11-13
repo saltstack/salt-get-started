@@ -188,12 +188,9 @@ Back on your Salt master, you should have picked up an event similar to the foll
 ``` bash
 salt/beacon/minion1/inotify//home/vagrant/importantfile	{
     "_stamp": "2016-02-03T22:32:09.592113",
-    "data": {
-        "change": "IN_MODIFY",
-        "id": "minion1",
-        "path": "/home/vagrant/importantfile"
-    },
-    "tag": "salt/beacon/minion1/inotify//home/vagrant/importantfile"
+    "change": "IN_MODIFY",
+    "id": "minion1",
+    "path": "/home/vagrant/importantfile"
 }
 ```
 
