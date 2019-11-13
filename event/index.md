@@ -14,7 +14,7 @@ step: 1
 Here are just a few of the things our users do with Salt's event driven infrastructure:
 
 - Send a text message when a user logs on to a production server.
-- Notify a Slack or HipChat channel when a build fails.
+- Notify a Slack channel when a build fails.
 - Instantly restore a configuration file when an unauthorized change is made.
 - Automatically scale cloud resources.
 - Monitor disk, processor, ram, and other system stats and take action outside of defined thresholds.
