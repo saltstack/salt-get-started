@@ -47,9 +47,10 @@ minion configuration file:
 ``` yaml
 beacons:
   inotify:
-    home/user/importantfile:
-      mask:
-        - modify
+    - files:
+        home/user/importantfile:
+          mask:
+            - modify
 ```
 
 ### Beacon Monitoring Interval
@@ -65,10 +66,11 @@ re-trigger the beacon, add and set the `disable_during_state_run` argument to
 ``` yaml
 beacons:
   inotify:
-    home/user/importantfile:
-      mask:
-        - modify
-    disable_during_state_run: True 
+    - files:
+        home/user/importantfile:
+          mask:
+            - modify
+    - disable_during_state_run: True
 ```
 
 As with most loop conditions, you'll probably find out the hard way when you need to add this.
@@ -82,9 +84,10 @@ provide an interval argument to a beacon. The following beacons run on 5- and
 ``` bash
 beacons:
   inotify:
-    /etc/httpd/conf.d: {}
-    /opt: {}
-    interval: 5
+    - files:
+        /etc/httpd/conf.d: {}
+        /opt: {}
+    - interval: 5
   load:
     - 1m:
       - 0.0
@@ -161,9 +164,10 @@ On `minion1`, edit the `/etc/salt/minion` file and add the following content at 
 ``` yaml
 beacons:
   inotify:
-    /home/vagrant/importantfile:
-      mask:
-        - modify
+    - files:
+        /home/vagrant/importantfile:
+          mask:
+            - modify
 ```
 Save the file, and then restart the Salt minion service:
 
