@@ -28,8 +28,10 @@ As is common in Salt, the roster system can be extended. You can currently use a
 - [cloud](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.cloud.html)
 - [clustershell](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.clustershell.html)
 - [flat (default)](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.flat.html)
-- [range (in development)](https://docs.saltstack.com/en/develop/ref/roster/all/salt.roster.range.html)
+- [range](https://docs.saltstack.com/en/develop/ref/roster/all/salt.roster.range.html)
 - [scan](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.scan.html)
+- [sshconfig](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.sshconfig.html)
+- [terraform](https://docs.saltstack.com/en/latest/ref/roster/all/salt.roster.terraform.html)
 
 This guide uses the flat file roster.
 
