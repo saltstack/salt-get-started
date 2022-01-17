@@ -9,7 +9,7 @@ step: 7
 
 # Data
 
-This section discusses the two primary aspects of system data: getting data *about* your systems, and setting data *to* your systems. Salt provides two different subsystems to perform each of these tasks respectively: Salt grains and Salt pillar.
+This section discusses the two primary aspects of system data: getting data *about* your systems, and delivering data *to* your systems. Salt provides two different subsystems to perform each of these tasks respectively: Salt grains and Salt pillar.
 
 This section also explains a third component, called Salt mine, which is used to push data from a minion to a shared data store on the master that can be accessed by all minions.
 
