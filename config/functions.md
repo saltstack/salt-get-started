@@ -204,7 +204,7 @@ Salt uses the state ID for the value of name. In this example, the `name`
 parameter is `https://github.com/saltstack/salt.git`:
 
 ``` yaml
-https://github.com/saltstack/salt-bootstrap:
+https://github.com/saltstack/salt.git:
   git.latest:
     - rev: develop
     - target: /tmp/salt
