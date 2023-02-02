@@ -45,7 +45,7 @@ All further communication between the Salt master and the Salt minion is encrypt
 
 ## Rotating Security Keys
 
-A rotating AES key is used to encrypt jobs that are sent to the Salt minion by the Salt master, and to encrypt connections to the Salt master fileserver. A new key is generated and used each time the Salt master restarts and each time a Salt minion key is deleted using the salt-key command. 
+A rotating AES key is used to encrypt jobs that are sent to the Salt minion by the Salt master, and to encrypt connections to the Salt master fileserver. A new key is generated and used each time the Salt master restarts and each time a Salt minion key is deleted/rejected using the salt-key command. 
 
 After the key is rotated, all Salt minions must re-authenticate to receive the updated key. This enables the AES key to rotate without interrupting the minion connection.
 
