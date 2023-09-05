@@ -16,7 +16,10 @@ overview:
 
 {: section sidebar :}
 
-#### More Jinja2
+#### What is Jinja?
+
+Jinja is a templating language for Python, and helps make Salt configurations
+more robust.
 
 Jinja2 is widely used, and there is a lot more detail in the [Jinja2
 docs](http://jinja.pocoo.org/docs/dev/).
@@ -31,7 +34,7 @@ Salt pillar data, and call Salt execution modules. This is in addition to the
 standard control structures and Python data types that are already available in
 Jinja.
 
-## Conditionals
+## Jinja Conditionals
 
 One of the most common uses of Jinja is to insert conditional statements into
 Salt pillar files. 
@@ -78,7 +81,7 @@ install apache:
 The `httpd` package is installed on RedHat, while the `apache2` package is
 installed on Debian.
 
-## Loops
+## Jinja Loops
 
 Loops are useful for creating users and folders in Salt states.
 
